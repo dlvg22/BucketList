@@ -3,7 +3,7 @@
  
 			<div class="wrapper">
 					<div class="col-md-12">
-					<h1> WELCOME TO BUCKETLIST! </h1>
+					<h1 class="title"> WELCOME TO BUCKETLIST! </h1>
 					</div>
 					<div class="col-md-3">
 					<div class="boxes">
