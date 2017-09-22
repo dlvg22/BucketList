@@ -24,4 +24,4 @@
   <script src="<?php echo base_url('assets/js/script.js');?>"></script>
 	
 	</head>
-	<body style=" background-image: url(<?php echo  base_url('assets/images/background.jpg'); ?>)">
+
