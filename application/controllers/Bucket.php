@@ -11,4 +11,12 @@ class Bucket extends CI_Controller {
 		$this->load->view('template/footer');
 		
 	}
+	public function profile()
+	{
+		$data['title']="Profile";
+		$this->load->view('template/header',$data);
+		$this->load->view('bucket/profile');
+		$this->load->view('template/footer');
+		
+	}
 }
