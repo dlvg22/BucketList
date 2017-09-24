@@ -1,0 +1,101 @@
+.wrapper{width:1366;
+
+}
+.navbar{
+	font-family:Verdana;
+	width:1341px;
+	height:80px;
+	background-color:cyan;
+}
+h2{
+    background-color:lightblue;
+}
+btn btn-primary custom{
+	padding: 10px;
+}
+
+.profpic{padding:10px;
+	width:150px;
+	height:300px;
+	float:left;
+	border: 2px solid black;
+	background-color:white;
+	border-radius:5px;
+}
+.navbar a{color:black;
+}
+.box22{
+	width:518px;
+	border:2px solid black;
+	background-color:white;
+	border-radius:5px;
+	height:240px;
+}
+.nav li a:hover{background:orange;
+}
+.box21{ 
+text-align: justify;
+width: 220px;
+border: 2px solid black;
+background-color:white;
+float:left;
+border-radius:5px;
+text-align:center;
+height:240px;
+}
+.about{ padding:20px;
+width:100px;
+height:240px;
+float:left;
+border-radius:5px;
+border: 2px solid black;
+background-color:white;
+}
+
+
+.feed3{
+	width:550px;
+	border: 1px solid black;
+	background-color:white;
+	border-radius:5px;
+	float:left;
+}
+.space{width:200px;
+height:240px;
+}
+.title{
+	padding:10px;
+	width:650px;
+	text-align:center;
+	border: 1px solid black;
+	background-color:white;
+	border-radius:5px;
+}
+.dream {
+width:250px;
+padding:20px;
+border: 2px solid black;
+float:left;
+border-radius:5px;
+background-color:white;
+}
+.calendar{
+	border: 1px solid black;
+	background-color:white;
+	height:300px;
+}
+.box{
+        border: 1px solid #aaa; 
+        border-radius: 4px; 
+        color: #000; 
+		width:700px;
+		height:90px;
+		border-radius:5px;
+    }
+
+.table li a:hover{background:cyan;
+
+}
+
+.table a{color:black;
+margin-left:20px;}
