@@ -1,5 +1,5 @@
 
-<body style="background: lightgray;">
+
 			<div class="wrapper">
 				<div class="container-fluid">
 
