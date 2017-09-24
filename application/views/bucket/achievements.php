@@ -1,10 +1,4 @@
-<html>
-<head>
-	<title>Achievement</title>
-	<link rel="stylesheet" href="<?php echo base_url("assets/css/achievements.css"); ?>">
-</head>
-<body style="background: lightgray;">
-			<div class="wrapper">
+		<div class="wrapper">
 				<div class="container-fluid">
 
 					<div class="col-md-12 navbar-header form-inline navbar">
@@ -61,6 +55,3 @@
 				</div>
 				</div>
 				
-		
-</body>
-</html>
