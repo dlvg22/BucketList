@@ -1,3 +1,4 @@
+<body style=" background-image: url(<?php echo  base_url('assets/images/background.jpg'); ?>)">
 <div class="container-fluid">
 	<div class="row">
  
@@ -35,3 +36,4 @@
 				</div>
 	</div>
 </div>
+</body>
