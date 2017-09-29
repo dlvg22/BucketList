@@ -19,4 +19,11 @@ class Bucket extends CI_Controller {
 		$this->load->view('template/footer');
 		
 	}
+	public function home()
+	{
+		$data['title']="Home";
+		$this->load->view('template/header',$data);
+		$this->load->view('bucket/home');
+		$this->load->view('template/footer');
+	}	
 }
