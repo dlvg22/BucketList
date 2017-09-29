@@ -15,15 +15,31 @@ class Bucket extends CI_Controller {
 	{
 		$data['title']="Profile";
 		$this->load->view('template/header',$data);
-		$this->load->view('bucket/profile');
+		$this->load->view('template/navigation',$data);
+		$this->load->view('template/sidebar-home');
+		$this->load->view('bucket/profile-view');
 		$this->load->view('template/footer');
-		
 	}
+	
+	
 	public function home()
 	{
 		$data['title']="Home";
 		$this->load->view('template/header',$data);
-		$this->load->view('bucket/home');
+		$this->load->view('template/navigation',$data);
+		$this->load->view('template/sidebar-home');
+		$this->load->view('bucket/bucketwall');
+		$this->load->view('template/right-panel');
+		$this->load->view('template/footer');
+	
+	}
+		public function settings()
+	{
+		$data['title']="Home";
+	
+		$this->load->view('template/header',$data);
+			$this->load->view('bucket/settings_includes/header',$data);
+		$this->load->view('bucket/settings');
 		$this->load->view('template/footer');
 	}	
 }

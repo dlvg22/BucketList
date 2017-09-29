@@ -1,8 +1,7 @@
-<head>
+
 	<title> Profile </title>
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/jayson.css"); ?>">
-</head>
-<body>
+
 <div class="container-fluid ">
 				
 				<div class="row">
