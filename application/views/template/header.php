@@ -15,8 +15,8 @@
 
   <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">-->
-		<link rel="stylesheet" href="<?php echo base_url("assets/css/jayson.css"); ?>">
- <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   <link rel="stylesheet" href="<?php echo base_url("assets/css/settings.css"); ?>">
+	 <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <<<<<<< HEAD
@@ -24,7 +24,7 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   
 =======
-  <link rel="stylesheet" href="<?php echo base_url("assets/css/settings.css"); ?>">
+ 
 >>>>>>> 6b5bcaaf111c1465145e26727c7165ba876f4303
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->

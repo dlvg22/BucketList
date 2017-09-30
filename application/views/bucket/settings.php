@@ -12,9 +12,9 @@
 					<span class="menu">
 						<form class="form-horizontal">
     					<div class="form-group">
-      					 	<label for="inputEmail" class="control-label col-xs-3">New Nickname</label>
+      					 	<label for="inputNickname" class="control-label col-xs-3">New Nickname</label>
      					   	<div class="col-xs-6">
-            				<input type="email" class="form-control" id="inputEmail" placeholder="New Nickname">
+            				<input type="name" class="form-control" id="inputEmail" placeholder="New Nickname">
         					</div>
     					  	<div class="col-xs-offset-3 col-xs-6s ">
             				<button type="submit" class="btn btn-primary">
@@ -34,9 +34,9 @@
 					<span class="menu">
 						<form class="form-horizontal">
     					<div class="form-group">
-      					 	<label for="inputEmail" class="control-label col-xs-3">New Username</label>
+      					 	<label for="inputUsername" class="control-label col-xs-3">New Username</label>
      					   	<div class="col-xs-6">
-            				<input type="email" class="form-control" id="inputEmail" placeholder="New Username">
+            				<input type="username" class="form-control" id="inputEmail" placeholder="New Username">
         					</div>
     					   	<div class="col-xs-offset-3 col-xs-6s ">
             				<button type="submit" class="btn btn-primary">
@@ -77,15 +77,15 @@
 					<span class="menu">
 						<form class="form-horizontal">
           				<div class="form-group">
-      					 	<label for="inputEmail" class="control-label col-xs-3">Old Password</label>
+      					 	<label for="inputPassword" class="control-label col-xs-3">Old Password</label>
      					   	<div class="col-xs-6">
-            				<input type="password" class="input-md form-control" id="inputEmail" placeholder="New Password">
+            				<input type="password" class="input-md form-control" id="inputEmail" placeholder="Type old password here">
         					</div>
     					</div>
     					<div class="form-group">
         					<label for="inputPassword" class="control-label col-xs-3">New Password</label>
        						<div class="col-xs-6">
-    				        <input type="password" class="input-md form-control" id="inputPassword" placeholder="Retype Password">
+    				        <input type="password" class="input-md form-control" id="inputPassword" placeholder="Type new password here">
         					</div>
     					</div>
        					<div class="form-group">
@@ -108,20 +108,21 @@
         <script>
               $('.menu').hide();
 
-              $('.item p').click(function(e){
+              $('.item ').click(function(e){
 
               e.preventDefault();
-              var $this = $(this).parent().find('.menu');
+              var $this = $(this).find('.menu');
               $(".menu").not($this).hide();
               $(".menu").not($this).parent().removeClass("colored");
               $this.toggle();
-              $(this).parent().toggleClass("colored");
+              $(this).toggleClass("colored");
               });
 
               $('.closer').click(function(e){
                e.preventDefault();
-              $(".menu").hide();
-              $(".item").removeClass("colored");
+              var $this = $(this).find('.menu');
+              $this.hide();
+              $(this).removeClass("colored");
               });
               
         </script>
