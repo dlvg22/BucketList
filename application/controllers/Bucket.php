@@ -35,10 +35,9 @@ class Bucket extends CI_Controller {
 	}
 		public function settings()
 	{
-		$data['title']="Home";
+		$data['title']="Settings";
 	
 		$this->load->view('template/header',$data);
-			$this->load->view('bucket/settings_includes/header',$data);
 		$this->load->view('bucket/settings');
 		$this->load->view('template/footer');
 	}	
