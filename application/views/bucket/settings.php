@@ -108,21 +108,20 @@
         <script>
               $('.menu').hide();
 
-              $('.item ').click(function(e){
+              $('.item p').click(function(e){
 
               e.preventDefault();
-              var $this = $(this).find('.menu');
+              var $this = $(this).parent().find('.menu');
               $(".menu").not($this).hide();
               $(".menu").not($this).parent().removeClass("colored");
               $this.toggle();
-              $(this).toggleClass("colored");
+              $(this).parent().toggleClass("colored");
               });
 
               $('.closer').click(function(e){
                e.preventDefault();
-              var $this = $(this).find('.menu');
-              $this.hide();
-              $(this).removeClass("colored");
+              $(".menu").hide();
+              $(".item").removeClass("colored");
               });
               
         </script>
