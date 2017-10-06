@@ -1,0 +1,169 @@
+html,body{
+	margin: 0;
+	padding:0;
+  padding-top:30px; 
+}
+/* Log-In Footer*/
+.footcontent{
+  font-family: verdana;
+  min-height: 125px;
+  position: bottom;
+  margin: 0;
+  padding: 0;
+  color: #BFBFBF;
+  background-color: #141414;
+}
+
+.footcontent li{
+  font-size: 24;
+  margin-right: 40px;
+  display: inline;
+  list-style: none;}
+
+.footcontent a{
+    color: #BFBFBF;
+    font-family: Verdana;
+}
+
+.footcontent a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.lefter{
+  padding-left:5%; 
+  color: #909090;
+  font-size: 15;
+  padding-top: 4%;
+}
+
+.center{
+  padding-top: 3.5%;
+}
+.righter2{
+  padding-top: 4%;
+}
+.righter2 p{
+  font-size: 16;
+}
+.footcontent img{
+  margin-left: 20px;
+  width: 10%;
+}
+
+/*Default Footer*/
+.plainfooter{
+  position: bottom;
+  border-top: 2px black solid;
+  width: 100%;
+  bottom: 0;
+  height: 40px;
+  color: #4F4F4F;   
+  margin: 0;
+  padding-top: 5px;    
+  }
+
+.plainfooter li {
+  color: #4F4F4F;
+  font-size: 20;
+  margin-right: 40px;
+  display: inline;
+  list-style: none;}
+
+.plainleft{
+  padding-left:5%; 
+  font-size: 16;
+}
+
+.plaincenter a{
+  color: #4F4F4F;
+}
+
+.plaincenter a:hover{
+  color: black;
+  text-decoration: none;
+}
+
+/*Normal Header*/
+.topsider{ 
+  position: fixed;
+  top: 0;
+  background-color: #FFE976;
+  margin-bottom: 200px;
+  z-index: 9999;
+ }
+
+#logo{
+  width:30px;
+  margin-left:80px;
+  padding-top:5px;
+}
+.logo-text{
+  margin-left:10px;
+  font-size:30px;
+  margin-top:9px;
+  font-family:rockwell;
+  font-weight:bold;
+  
+}
+
+.navi {
+  padding-top: 13px;
+  font-size: 27px;
+}
+
+.navi span{
+  margin-right:25px;
+}
+
+.navi a{
+  color: black;
+}
+
+.navi a:hover{
+  color: #295CD4;
+}
+
+.sbar{
+  padding-top: 13px;
+  font-size: 14px;
+}
+.barbutton{
+  cursor: pointer;
+}
+
+.barbutton:hover{
+  background-color: #ACACAC;
+}
+.ColoredButton{
+  color: white;
+  background-color: #063AB1;
+}
+.bar{
+  width: 100%;
+}
+
+.set{
+  vertical-align: top;
+  padding-top: 10px;
+  font-size: 25px;
+}
+
+.account-icon{
+  cursor: pointer;
+  height: 45px;
+  width: 45px;
+}
+.dropdown-menu li{
+  margin: 0;
+  padding: 0;
+}
+.dropdown-menu span{
+  margin-right: 10px;
+}
+.dropdown-menu a{
+  text-decoration: none;
+  font-family: calibri;
+  color: black;
+   font-size: 15px;
+}
