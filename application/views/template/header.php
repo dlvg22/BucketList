@@ -4,6 +4,7 @@
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/Home.css"); ?>">
 		<link rel="stylesheet" href="<?php echo base_url("assets/css/achievements.css"); ?>">
 		<link rel="stylesheet" href="<?php echo base_url("assets/css/profile.css"); ?>">
+		<link rel="stylesheet" href="<?php echo base_url("assets/css/slider.css"); ?>">
 	<link href="<?php echo base_url('assets/css/default.css');?>" rel="stylesheet" type="text/css">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0"/>
 	<link href="<?php echo base_url("assets/css/style.css"); ?>" rel="stylesheet" type="text/css">
@@ -12,6 +13,7 @@
 	<link href="<?php echo base_url('assets/css/mybootstrap.css'); ?>" rel="stylesheet" type="text/css">
 	<script src="<?php echo base_url('bootstrap/js/jquery.min.js');?>"> </script>
 	<script src="<?php echo base_url('bootstrap/js/bootstrap.min.js');?>"> </script>
+	
 
   <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">-->
