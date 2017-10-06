@@ -18,7 +18,7 @@ body{
 .contents{
 	color: black;
 	background-color:white;
-	min-height: 500px;
+	min-height: 575px;
 }
 
 .item{
@@ -31,11 +31,11 @@ body{
 }
 
 .item:hover{
-	background-color: #FFE683;
+	background-color: #D1D1D1;
 	cursor: pointer;
 }
 
-.item.colored { background-color: #FFEFB1; }
+.item.colored { background-color: #D1D1D1; }
 .item.colored p{ color: #5273BF;}
 .righter{	display:block;float:right;}
 /*footer {

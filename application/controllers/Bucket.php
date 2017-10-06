@@ -6,9 +6,7 @@ class Bucket extends CI_Controller {
 		public function __construct()
 	{
 		parent:: __construct();
-		
-		$this->load->model('bucket_model','login');
-		
+	
 	}
 	
 	public function index()
@@ -57,7 +55,6 @@ class Bucket extends CI_Controller {
 	{
 		$data['title']="Profile";
 		$this->load->view('template/header',$data);
-		$this->load->view('template/navigation',$data);
 		$this->load->view('template/sidebar-home');
 		$this->load->view('bucket/profile-view');
 		$this->load->view('template/footer');
