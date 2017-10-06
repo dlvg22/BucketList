@@ -7,7 +7,7 @@
 					<table class="table-responsive table">
           <tr><td>
 					<div class="item">
-					<p><b>Nickname: </b>&nbsp;<u><?php echo $data['nickname']; ?></u><span class="glyphicon glyphicon-pencil righter"></span></p>
+					<p><b>Nickname: </b>&nbsp;<?php echo $data['nickname']; ?><span class="glyphicon glyphicon-pencil righter"></span></p>
 					
 					<span class="menu">
 						<form class="form-horizontal">
@@ -30,7 +30,7 @@
 
           <tr><td>
     			<div class="item">
-					<p><b>Username: </b>&nbsp;<u><?php echo $data['username']; ?></u><span class="glyphicon glyphicon-pencil righter"></span></p>		
+					<p><b>Username: </b>&nbsp;<?php echo $data['username']; ?><span class="glyphicon glyphicon-pencil righter"></span></p>		
 					<span class="menu">
 						<form class="form-horizontal">
     					<div class="form-group">
@@ -51,7 +51,7 @@
 					</td></tr>
           <tr><td>
           <div class="item">
-          <p><b>Email: </b>&nbsp;<u><?php echo $data['email']; ?></u><span class="glyphicon glyphicon-pencil righter"></span></p>
+          <p ><b>Email: </b>&nbsp;<?php echo $data['email']; ?><span class="glyphicon glyphicon-pencil righter"></span></p>
         
           <span class="menu">
             <form class="form-horizontal">

@@ -8,14 +8,13 @@ class Bucket extends CI_Controller {
 		$data['title']="LOGIN";
 		$this->load->view('template/header',$data);
 		$this->load->view('bucket/login');
-		$this->load->view('template/footer');
+		$this->load->view('template/login_footer');
 		
 	}
 	public function profile()
 	{
 		$data['title']="Profile";
 		$this->load->view('template/header',$data);
-		$this->load->view('template/navigation',$data);
 		$this->load->view('template/sidebar-home');
 		$this->load->view('bucket/profile-view');
 		$this->load->view('template/footer');
