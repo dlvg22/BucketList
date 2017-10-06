@@ -1,7 +1,8 @@
 <!-- home photo -->
 <div class="col-md-2 col-md-offset-1 rmv-padding default-space">
-			<div class="photo-template ">
-			<div ><a href=""><img src="<?php echo base_url('assets/images/franky.jpg'); ?>" class="user-image" /></a></div>
+			<div id="change"  class="photo-template emphasize-dark">
+			
+			<a href=""><img src="<?php echo base_url('assets/images/franky.jpg'); ?>" class="user-image " /></a>
 			
 			<?php
 			$name="Frank Ho";
@@ -14,10 +15,14 @@
 			echo '<p class="user-name">'.$name.'</p>';
 			echo '<p class="user-acc">'.$user.'</p>';
 			?>
+				
 			</div>
+				
 
-
-		<div class="home-about">
+				<div id="cphoto" class="change-hide change-photo text-center">
+					<span class="glyphicon glyphicon-camera"></span> Change photo 
+				</div>
+		<div class="home-about borders">
 			<span class="glyphicon glyphicon-user about-title icon-color"></span>&nbsp;<strong>About</strong>
 			<p class="text-center about-title"><?php echo $about; ?></p>
 			<hr>	
@@ -27,7 +32,7 @@
 			<hr>
 		</div>   
 
-			<div  class="friend-list">
+			<div  class="friend-list borders">
 					<div class="col-md-12 rmv-padding"> <label><a href="#">BucketMate</a></label></div>
 									<?php 
 							$friends =array(
