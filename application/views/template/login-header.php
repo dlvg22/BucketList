@@ -65,10 +65,10 @@
 			</div>
 		</div>
 		<!-- Carousel nav -->
-		<a class="carousel-control  " href="#myCarousel" data-slide="prev">
+		<a class="carousel-control left" href="#myCarousel" data-slide="prev">
 			<span class="glyphicon glyphicon-chevron-left"></span>
 		</a>
-		<a class="carousel-control arrow" href="#myCarousel" data-slide="next">
+		<a class="carousel-control right" href="#myCarousel" data-slide="next">
 			<span class="glyphicon glyphicon-chevron-right"></span>
 		</a>
 	</div>
@@ -80,11 +80,12 @@
 	<!-- ideas -->
 	<div class="ideas-wrapper">
 		<div class="col-md-12 text-center logo-text">BUCKET IDEAS</div> 
-			<div class="col-md-3 ideas">
-				<img src="<?=base_url('assets/images/bohol.jpg')?>" class="">
 			
-		
+			<div class="col-md-offset-1 col-sm-12 col-md-3 ideas">
+				<img src="<?=base_url('assets/images/bohol.jpg')?>" class="img-responsive ideas-photo">
+				<div class="post-content">BOHOL ESCAPADE</div>
 			</div>
+			
 	</div>
 	
 	

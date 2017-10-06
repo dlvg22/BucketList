@@ -7,18 +7,52 @@ class Bucket extends CI_Controller {
 	{
 		parent:: __construct();
 		
-		$this->load->model('bucket_model','dbBucket');
+		$this->load->model('bucket_model','login');
 		
 	}
-
+	
 	public function index()
-	{
-		$data['title']="LOGIN";
-		$this->load->view('template/header',$data);
-		$this->load->view('bucket/login');
-		$this->load->view('template/footer');
+	{		
+			
+			if( $_SERVER['REQUEST_METHOD']=='POST'){
+			
+			
+			$validate = array (
+				array('field'=>'user','label'=>'User','rules'=>'trim|required'),
+				array('field'=>'email','label'=>'Email','rules'=>'trim|required'),
+				array('field'=>'password','label'=>'Password','rules'=>'trim|required'),
+							);
+			$this->form_validation->set_rules($validate);
+			
+			if ($this->form_validation->run()===FALSE){
+				$data['errors'] = validation_errors();
+			}
+			else{ 
+				$record = array(
+								'user'=>$_POST['user'],
+								'email'=>$_POST['email'],
+								'password'=>$_POST['password']
+								
+							);
+							
+				$insert_user = $this->login->create($record);
+				
+				$data['saved'] = TRUE;
+				
+			}
+			
+		}
+		else{ 
+				
+		}
 		
+			$data['title']="LOGIN";
+			$this->load->view('template/header',$data);
+			$this->load->view('bucket/login');
+			$this->load->view('template/footer');
+			
 	}
+	
 	public function profile()
 	{
 		$data['title']="Profile";
@@ -48,5 +82,23 @@ class Bucket extends CI_Controller {
 		$this->load->view('template/header',$data);
 		$this->load->view('bucket/settings');
 		$this->load->view('template/footer');
-	}	
+
+		
+			
+	}
+	
+	public function story()
+	{
+		$data['title']="story";
+	
+		$this->load->view('template/header',$data);
+		$this->load->view('bucket/story');
+		$this->load->view('template/footer');
+
+		
+			
+	}
+	
+		
 }
+?>
