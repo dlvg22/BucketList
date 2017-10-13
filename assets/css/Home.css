@@ -36,15 +36,6 @@
 	padding:4!important;
 	
 }
-.photo-template{
-		
-	
-	background-color:white;
-	height:250px;
-	
-	
-	
-}
 .emphasize-dark {
 	box-shadow: 0 0 2px 1px rgba(0,0,0,.35);
   
@@ -58,7 +49,7 @@
 .user-image{
 	width:225px;
 	height:200px;
-	  border: 5px solid white;
+	  border: 3px solid black;
 }
 
 .user-name{
