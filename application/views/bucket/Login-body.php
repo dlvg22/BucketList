@@ -7,11 +7,11 @@
 		<!-- Carousel items -->
 		<div class="carousel-inner ">
 			<div class="item active mycarousel">
-				<img src="<?=base_url('assets/images/bohol.jpg')?>" class="photo-slide" alt="First Slide">
+				<img src="<?=base_url('assets/images/logoCarousel.png')?>" class="photo-slide" alt="First Slide">
 			  
 			</div>
 			<div class="item mycarousel rmv-padding">
-				<img src="<?=base_url('assets/images/bohol.jpg')?>" class="photo-slide" alt="Second Slide">
+				<img src="<?=base_url('assets/images/taglineCarousel.png')?>" class="photo-slide" alt="Second Slide">
 				<div class="carousel-caption">
 					
 				</div>
