@@ -9,7 +9,7 @@
 					<div class="item">
 					<p><b>Nickname: </b>&nbsp;<?php echo $data['nickname']; ?><span class="glyphicon glyphicon-pencil righter"></span></p>
 					
-					<span class="menu">
+					<span class="menu-settings">
 						<form class="form-horizontal">
     					<div class="form-group">
       					 	<label for="inputNickname" class="control-label col-xs-3">New Nickname</label>
@@ -31,7 +31,7 @@
           <tr><td>
     			<div class="item">
 					<p><b>Username: </b>&nbsp;<?php echo $data['username']; ?><span class="glyphicon glyphicon-pencil righter"></span></p>		
-					<span class="menu">
+					<span class="menu-settings">
 						<form class="form-horizontal">
     					<div class="form-group">
       					 	<label for="inputUsername" class="control-label col-xs-3">New Username</label>
@@ -53,7 +53,7 @@
           <div class="item">
           <p ><b>Email: </b>&nbsp;<?php echo $data['email']; ?><span class="glyphicon glyphicon-pencil righter"></span></p>
         
-          <span class="menu">
+          <span class="menu-settings">
             <form class="form-horizontal">
               <div class="form-group">
                   <label for="inputEmail" class="control-label col-xs-3">New email</label>
@@ -74,7 +74,7 @@
           <tr><td>
           <div class="item">
 					<p><b>Change Password </b><span class="glyphicon glyphicon-pencil righter"></span></p>		
-					<span class="menu">
+					<span class="menu-settings">
 						<form class="form-horizontal">
           				<div class="form-group">
       					 	<label for="inputPassword" class="control-label col-xs-3">Old Password</label>
@@ -104,24 +104,8 @@
 
         </div>
         </div>
-
-        <script>
-              $('.menu').hide();
-
-              $('.item p').click(function(e){
-
-              e.preventDefault();
-              var $this = $(this).parent().find('.menu');
-              $(".menu").not($this).hide();
-              $(".menu").not($this).parent().removeClass("colored");
-              $this.toggle();
-              $(this).parent().toggleClass("colored");
-              });
-
-              $('.closer').click(function(e){
-               e.preventDefault();
-              $(".menu").hide();
-              $(".item").removeClass("colored");
-              });
-              
-        </script>
+<script>
+	  
+		
+</script>
+  
