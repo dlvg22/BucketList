@@ -1,8 +1,8 @@
 
 		</div>
-	</div>
+
 </div>
-<div class="row footcontent">
+<div class="row footcontent col-md-12">
 	<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 lefter">
 	<p>&copy;2017 Bucketlist</p>
 	</div>

@@ -17,7 +17,10 @@
 				<div class="col-md-3 col-md-offset-3 navigation-tool">
 				<div class=" col-md-2 icon-tool"><span class="glyphicon glyphicon-globe"></span></div>
 				<div class=" col-md-2 icon-tool"><span class="glyphicon glyphicon-envelope"></span></div>
+				
 				<div class="col-md-6 col-md-offset-1  img-tool"><img src="<?php echo base_url('assets/images/franky.jpg'); ?>" class="img-icon img-circle" alt="Picture"  /><span id="name"><?php echo $name; ?></span></div>
+				<a href="<?php echo base_url('index.php/Login/logout'); ?>">LOGOUT</a>
+			
 				</div>
 		</div>
 

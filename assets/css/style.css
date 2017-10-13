@@ -1,6 +1,8 @@
 body{
+	margin: 0;
+	padding:0;
 	padding-right: 0 !important;
-	overflow-y: scroll!important;
+	overflow-y:visible!important;
 }
 
 .navigation-header{
@@ -209,15 +211,21 @@ color:white;
 				right: 0;
 				bottom: 550;
 				left: 0;
-			
 				z-index: 10;
-			
 				color: #fff;
 				text-align: center;
 				
-	
-	
-	
+}
+#login-img{
+				position: absolute;
+				right: 0;
+				bottom: 550;
+				left: 0;
+				top:300px;
+				z-index: 10;
+				color: #fff;
+				text-align: center;
+				height:500px;
 }
 
 #logo{
@@ -225,6 +233,19 @@ color:white;
 	width:30px;
 	margin-left:80px;
 	padding-top:5px;
+}
+#logo2{
+	
+	width:30px;
+	margin-left:95px;
+	padding-top:10px;
+}
+.default-text{
+	
+	
+	
+	 font-family: Futura;
+	 font-size:300px;
 }
 .logo-text{
 	margin-left:10px;
@@ -234,11 +255,25 @@ color:white;
 	font-weight:bold;
 	
 }
+.logo-text2{
+	margin-left:12px;
+	font-size:30px;
+	margin-top:15px;
+	font-family:rockwell;
+	font-weight:bold;
+	
+}
 .header-margin{
 	margin-top:15px;
 
 	
 }
+.header-margin2{
+	margin-top:20px;
+
+	
+}
+	
 .header-text{
 		font-family:rockwell;
 		font-weight:bold;
@@ -260,9 +295,17 @@ color:white;
 	color:black;
 	
 }
-.btn-red:hover{
+
+.btn-red2{
 		
 	background-color:rgba(255,255,255,0.5);
+	border:1px solid black;
+	color:black;
+	
+}
+.btn-red2:hover{
+		
+	background-color:rgba(0,0,0,0.5);
 	border:1px solid black;
 	color:black;
 	
@@ -272,11 +315,25 @@ color:white;
 	
 	background-color:rgba(255,255,255,0);
 	color:black;
+	
 }
+.btn-green2{
+	
+	
+	background-color:rgba(255,255,255,0);
+	color:black;
+}
+
 .btn-green:hover{
 	
 	
 	background-color:rgba(255,255,255,0.5);
+	color:blue;
+}
+.btn-green2:hover{
+	
+	
+	background-color:rgba(0,0,0,0.5);
 	color:blue;
 }
 
@@ -284,12 +341,14 @@ color:white;
 
 	
 	padding:0!important;
-	border:0!important;}
+	border:0!important;
+	}
+	
 /* ideas */
 	
 .ideas{
 	height:200px;	
-
+	
 
 		padding:0!important;
 }
@@ -306,11 +365,19 @@ color:white;
     height:200px;
 	border:3px solid black;
 	
+}
+.ideas  .ideas-photo:hover{
+    height:200px;
+	border:3px solid red;
 	
 }
 
 .ideas .post-content {
+
 	background-color:rgba(255,255,255,0.5);
+	font-family:arial;
+	font-size:20px;
+	padding-left:15px;
 	color:black;
 	width:100%;
 	height:30px;
@@ -324,9 +391,108 @@ color:white;
 
 .ideas{
     position:relative;
-
+	margin:10px; padding:10px;
 }
 .rmv-padding{
 	margin:0!important;
 	padding:0!important;
 }
+.ideas-wrapper{
+	
+	padding-left:80px;
+	background-color:	#DCDCDC;
+	height:1400px;
+}
+@media (max-width: 767px) {
+  
+  .ideas-wrapper {
+   padding-left:0px;
+   height:100%;
+  }
+}
+
+.bucket-login{
+	height:1200px;
+	width:100%;
+	background-color:white;
+	
+}
+.login-photos{
+	height:500px;
+}
+
+#hiddentitle{
+	position:fixed;
+	top:0px;
+	width:100%; 
+	height:75px; 
+	background-color: rgba(255,255,255, .95);
+	background-image: none !important;
+	border-bottom:2px solid dodgerblue !important;
+	line-height: 40px !important;
+	box-shadow: 0 12px 6px -6px rgba(0,0,0, .2) !important;
+	z-index:9999!important;
+
+
+}
+.btns{
+	
+	background-color:dodgerblue;
+	
+}
+.logo-size{
+	width:150px;
+	height:150px;
+}
+
+.readmore{ 
+position: absolute; 
+right: 350px;
+top:330px;
+background-color: rgba(255,255,255, 0.1);
+border:2px solid black;
+height:50px;
+width:200px;
+
+ }
+ .readmore:hover{ 
+position: absolute; 
+right: 350px;
+top:330px;
+background-color: rgba(255,255,255, 0.5);
+border:2px solid black;
+height:50px;
+width:200px;
+
+color:black;
+font-family:Arial;
+ }
+ .readmore2{ 
+position: absolute; 
+left: 350px;
+top:330px;
+background-color: rgba(255,255,255, 0.1);
+border:2px solid black;
+height:50px;
+width:200px;
+
+ }
+ .readmore2:hover{ 
+position: absolute; 
+right: 350px;
+top:330px;
+background-color: rgba(255,255,255, 0.5);
+border:2px solid black;
+height:50px;
+width:200px;
+
+color:black;
+font-family:Arial;
+ }
+.featured{
+	height:400px;
+	
+}
+
+
+
