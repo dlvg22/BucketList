@@ -408,7 +408,10 @@ color:white;
   .ideas-wrapper {
    padding-left:0px;
    height:100%;
+   display:none;
+
   }
+
 }
 
 .bucket-login{
@@ -432,6 +435,7 @@ color:white;
 	line-height: 40px !important;
 	box-shadow: 0 12px 6px -6px rgba(0,0,0, .2) !important;
 	z-index:9999!important;
+
 
 
 }
@@ -493,6 +497,25 @@ font-family:Arial;
 	height:400px;
 	
 }
+.signup{
+	
+	margin-left:15px;
 
+	
+}
 
-
+.verify
+{
+    margin-top: 4px;
+    margin-left: 9px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+	background-repeat:none;
+}
+.signup-field{
+	margin:10px;
+	padding-bottom:10px!important;
+	
+	
+}

@@ -45,9 +45,9 @@
 				<?php echo $name; ?></span>
 				 <ul class="dropdown-menu" role="menu">
     			  <li role="presentation"><a role="menuitem" href="#"><span class="glyphicon glyphicon-User"></span> Profile</a></li>
-    			  <li role="presentation"><a role="menuitem" href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+    			  <li role="presentation"><a role="menuitem" href="<?=base_url('Bucket/settings')?>"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
     			  <li role="presentation" class="divider"></li>
-  			  	  <li role="presentation"><a role="menuitem" href="#"><span class="glyphicon glyphicon-off"></span> Log Out</a></li>    
+  			  	  <li role="presentation"><a role="menuitem" href="<?=base_url('Login/logout')?>"><span class="glyphicon glyphicon-off"></span> Log Out</a></li>    
     			</ul>
 
 				</div>

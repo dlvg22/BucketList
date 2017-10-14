@@ -39,7 +39,7 @@
 				</div>	
 				<div class="col-md-2 col-md-offset-1"> 
 				<button class="btn btn-green2 btn-sm"  data-toggle="modal" data-target="#showLogin" >LOGIN</button>
-				<button class="btn-red2  btn-sm "  >SIGN UP </button>
+				<button class="btn-red2  btn-sm "  data-toggle="modal" data-target="#showSignup" >SIGN UP </button>
 				
 				</div>
 				</div>
@@ -85,14 +85,14 @@
 				</div>	
 				<div class=" header-margin"> 
 				<button class="btn btn-green btn-sm "  data-toggle="modal" data-target="#showLogin">LOGIN</button>
-				<button class="btn-red  btn-sm "  >SIGN UP </button>
+				<button class="btn-red  btn-sm "   data-toggle="modal" data-target="#showSignup">SIGN UP </button>
 				
 				</div>
 				</div>
 				</div>
 				
 				
-				<div class="modal fade" id="showLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+	<div class="modal fade" id="showLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     	<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header" align="center">
@@ -132,5 +132,207 @@
 			</div>
 		</div>
 	</div>
- 
+	<!-- sign up form -->
 	
+	<div class="modal fade" id="showSignup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" align="center">
+					<img class="logo-size"  src="<?=base_url('assets/images/bucket list logo-07.png')?>">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+				</div>
+                
+  
+                <div id="div-forms">
+                
+             
+                    <?=form_open('Login/signup')?>
+		                <div class="modal-body">
+				    
+							<p>
+							<div id="usr_verify" class="col-md-12 rmv-padding signup-field">
+						
+							<input type="text" id="user_name" placeholder="Username" class="form-control"  name="user_name" value="<?php echo set_value('user_name'); ?>" />
+							</div>
+							
+							</p>		
+							<p>
+							<div id="usr_email" class="col-md-12 rmv-padding signup-field">
+							<input type="text" id="email" placeholder="Example@yahoo.com" class="form-control"  name="email" value="<?php echo set_value('email'); ?>" />
+							</div>
+							
+							</p>		
+							<p>
+							<div id="usr_password" class="col-md-12 rmv-padding signup-field">
+							<p><input name="pwrd" id="pwrd" class="form-control" type="password" placeholder="Password" required></p>
+							</div>
+							</p>	
+							<p>
+							<div id="usr_password2" class="col-md-12 rmv-padding signup-field">
+				    		<p><input name="confirm-pwrd" id="conpwrd" class="form-control" type="password" placeholder="Re-enter Password" required></p>
+							</div>
+							</p>								
+                           
+        		    	</div>
+				        <div class="modal-footer">
+                            <div>
+                                <button type="submit" id="reg" class="btn btn-primary btn-lg btn-block">SIGN UP</button>
+                            </div>
+				    	    
+				        </div>
+                    </form>
+                 
+                    
+                </div>
+                
+                
+			</div>
+		</div>
+	</div>
+	
+<script type="text/javascript">
+
+        var uname = false;
+        var uemail = false;
+        var uword = false;
+        var uword2 = false;
+$(document).ready(function(){
+	
+ $("#user_name").keyup(function(){
+  if($("#user_name").val().length >=5)
+  {
+  $.ajax({
+   type: "POST",
+   url: "<?php echo base_url();?>Login/check_user",
+   data: "name="+$("#user_name").val(),
+   success: function(msg){
+    if(msg=="true")
+    {	
+	
+			
+		$("#usr_verify").removeClass('has-error');
+		$("#usr_verify").addClass('has-success');
+		$("#usr_verify").append(' <span id="okay" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+
+		$('span[id^="notok"]').remove();
+	
+    }
+    else if(msg=="false")
+    {
+		$("#usr_verify").addClass('has-error');
+		$("#usr_verify").append('<span id="notok" class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
+			uname=false;
+		$('span[id^="okay"]').remove();
+    }
+   }
+  });
+  }
+  else 
+  {
+   	
+		$("#usr_verify").removeClass('has-error');
+		$("#usr_verify").removeClass('has-success');
+		
+		$('span[id^="notok"]').remove();		
+		$('span[id^="okay"]').remove();
+				uname=false;
+  }
+ });
+ 
+  $("#email").keyup(function(){
+  if($("#email").val().length >=5)
+  {
+  $.ajax({
+   type: "POST",
+   url: "<?php echo base_url();?>Login/check_user",
+   data: "name="+$("#email").val(),
+   success: function(msg){
+    if(msg=="true")
+    {	
+
+				
+			
+		$("#usr_email").removeClass('has-error');
+		$("#usr_email").addClass('has-success');
+		$("#usr_email").append(' <span id="okay2" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+
+		uemail=true;
+		$('span[id^="myemail"]').remove();
+	
+    }
+    else if(msg=="false")
+    {
+		$("#usr_email").addClass('has-error');
+		$("#usr_email").append('<span id="myemail" class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
+		
+			uemail=false;
+		$('span[id^="okay2"]').remove();
+		
+    }
+   }
+  });
+  }
+  else 
+  {
+   	
+		$("#usr_email").removeClass('has-error');
+		$("#usr_email").removeClass('has-success');
+			$('span[id^="myemailok"]').remove();
+				uemail=false;
+		$('span[id^="myemail"]').remove();
+  }
+ });
+ 
+ 	$("#pwrd").keyup(function(){
+        
+        if($("#pwrd").val().length < 5)
+        {
+            
+					$("#usr_password").removeClass('has-success');
+					$("#usr_password").addClass('has-error');
+					$("#usr_password").append(' <span id="okay5" class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
+					$('span[id^="okay6"]').remove();
+					uword=false;
+                
+          
+        }
+		 
+            else{
+             $("#usr_password").removeClass('has-error');
+					$("#usr_password").addClass('has-success');
+					$("#usr_password").append(' <span id="okay6" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+							$('span[id^="okay5"]').remove();
+				uword=true;
+            }
+    });
+    
+    $("#conpwrd").keyup(function(){
+        
+        if($("#conpwrd").val().length >=4)
+        {
+            if($("#conpwrd").val()!=$("#pwrd").val())
+            {
+					$("#usr_password2").removeClass('has-success');
+					$("#usr_password2").addClass('has-error');
+					$("#usr_password2").append(' <span id="okay3" class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
+					$('span[id^="okay4"]').remove();
+                uword2=false;
+                
+            }
+			
+            else{
+               $("#usr_password2").removeClass('has-error');
+					$("#usr_password2").addClass('has-success');
+					$("#usr_password2").append(' <span id="okay4" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+							$('span[id^="okay3"]').remove();
+		   uword2=true;
+            }
+        }
+    });
+		
+  
+ 
+});
+</script>
