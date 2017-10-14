@@ -7,8 +7,11 @@ class Bucket extends CI_Controller {
 		public function __construct()
 	{
 		parent:: __construct();
+<<<<<<< HEAD
 	
 		
+=======
+>>>>>>> 980fa1a75130c4abc617f4caebb042613d30cbb0
 	}
 	public function index()
 	{		
@@ -48,6 +51,7 @@ class Bucket extends CI_Controller {
 		
 			$data['title']="LOGIN";
 			$this->load->view('template/header',$data);
+			$this->load->view('template/navigation');
 			$this->load->view('bucket/login');
 			$this->load->view('template/footer');
 			
@@ -59,9 +63,10 @@ class Bucket extends CI_Controller {
 	{
 		$data['title']="Profile";
 		$this->load->view('template/header',$data);
+		$this->load->view('template/navigation');
 		$this->load->view('template/sidebar-home');
 		$this->load->view('bucket/profile-view');
-		$this->load->view('template/footer');
+		
 	}
 	
 	
@@ -89,6 +94,7 @@ class Bucket extends CI_Controller {
 		$data['title']="Settings";
 	
 		$this->load->view('template/header',$data);
+		$this->load->view('template/navigation');
 		$this->load->view('bucket/settings');
 		$this->load->view('template/footer');
 
@@ -108,6 +114,30 @@ class Bucket extends CI_Controller {
 			
 	}
 	
+	public function search()
+	{
+		$this->load->model('Profile_model','profile');
+		$data['title']='search';
+
+		$search =$this->input->get('search');
+		$arr1 = str_split($search);
 		
+		if (!null==$search && $arr1[0]!=" ")
+		{
+		$profile = $this->profile->getProfile($search);
+		
+		
+		$this->load->view('template/header',$data);
+		$this->load->view('template/navigation');
+		$this->load->view('bucket/searchfiltered', ['profile'=>$profile, 'search'=>$search] );
+		$this->load->view('template/footer');
+		}
+		else{
+			$this->load->view('template/header',$data);
+			$this->load->view('template/navigation');
+			$this->load->view('bucket/searchfiltered',['profile'=>'', 'search'=>$search]);
+			$this->load->view('template/footer');
+		}			
+	}	
 }
 ?>

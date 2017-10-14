@@ -2,11 +2,7 @@
 
 class Login_model extends CI_Model {
 	
-		public function __construct()
-	{
-		parent:: __construct();
-		
-	}
+
 	private $table = "users";
 	
 	public function create($data){
@@ -42,6 +38,31 @@ class Login_model extends CI_Model {
 			
 		  return $query=$this->db->get();
 	}
+	
+	public function signup($data){
+			$this->db->select('*');
+		    $this->db->where('username',$data['username']);
+		    $this->db->or_where('Email',$data['username']);
+			
+		
+		
+		
+	}
+	
+	public function check_user_exist($usr)
+{
+		 $this->db->where("username",$usr);
+		 $this->db->or_where("Email",$usr);
+		 $query=$this->db->get($this->table);
+		 if($query->num_rows()>0)
+		 {
+		  return true;
+		 }
+		 else
+		 {
+		  return false;
+		 }
+}
 	
 }
 

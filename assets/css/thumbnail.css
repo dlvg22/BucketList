@@ -1,0 +1,202 @@
+.row > .column {
+  padding: 0 8px;
+
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  margin-top:10px;
+  margin-bottom:10px;
+
+
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+
+
+
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 850px;
+  height: auto;
+}
+
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.img-size{
+	height:70%;
+	width:100%;
+	
+	
+}
+
+.caption-container {
+  text-align: center;
+   background-color: rgb(0,0,0,0.8); 
+  background-color: rgba(0,0,0,0.9);
+  padding: 10px 16px;
+  color:white;
+  font-size:20px;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+img.demo {
+  opacity: 0.6;
+  
+}
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+  
+}
+
+
+
+
+.tab{
+	margin-left:10px;
+	border: 2px solid black;
+	width:100%;
+	max-height:80%;
+	background-color:black;
+	overflow:auto!important;
+	position:relative;
+	}
+	 
+	 
+
+.hover-shadow{
+	height:30%;
+	width:100%;
+}
+
+
+
+.story{
+	border: 2px solid black;
+	min-height:80%;
+	background-color:white;
+	height:80%;
+	font-size:40px;
+	overflow:auto!important;
+	width:100%;
+
+}
+
+.story-wrapper{
+	width:100%;
+
+
+	background-color:#f0f5f5;
+
+}
+
+.story-header{
+	width:100%;
+	background-color:cyan;
+	height:15%;
+}
+

@@ -16,7 +16,15 @@ class Login extends CI_Controller {
 	
 	public function index()
 	{
+<<<<<<< HEAD
 		
+=======
+		if(isset($_SESSION['username'])||isset($_SESSION['email'])&&isset($_SESSION['password']))
+		{
+			redirect('Bucket/home','refresh');
+		}
+		else{
+>>>>>>> 980fa1a75130c4abc617f4caebb042613d30cbb0
 		$data['title']="BucketList";
 			if($_SERVER['REQUEST_METHOD']=='POST'){
 			$user=array(
@@ -50,6 +58,8 @@ class Login extends CI_Controller {
 		$this->load->view('bucket/Login-body');
 		$this->load->view('template/login_footer');
 		}
+		}
+		
 	}
     
 
@@ -61,4 +71,41 @@ class Login extends CI_Controller {
 		
 			
 	}
+	
+	public function signup()
+	{
+				$data=array(
+				'username'=>$this->input->post('user_name'),
+				'Email'=>$this->input->post('email'),
+				'password'=>$this->input->post('pwrd')
+				
+				);
+				$this->login->create($data);
+					$user=array(
+					'username'=>$data['username'],
+					'password'=>$data['password']);
+					$this->session->set_userdata($user);	
+						redirect('Bucket/home');
+				
+     
+	
+			
+	}
+	
+	
+	public function check_user()
+		{
+			
+		 $usr=$this->input->post('name');
+		 $result=$this->login->check_user_exist($usr);
+		
+		 if($result>0)
+		 {
+			 
+		 echo 'false';
+		  }
+		 else{
+		   echo	 'true';
+		  }
+		}
 }
