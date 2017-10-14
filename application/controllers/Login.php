@@ -16,15 +16,13 @@ class Login extends CI_Controller {
 	
 	public function index()
 	{
-<<<<<<< HEAD
-		
-=======
+
 		if(isset($_SESSION['username'])||isset($_SESSION['email'])&&isset($_SESSION['password']))
 		{
 			redirect('Bucket/home','refresh');
 		}
 		else{
->>>>>>> 980fa1a75130c4abc617f4caebb042613d30cbb0
+
 		$data['title']="BucketList";
 			if($_SERVER['REQUEST_METHOD']=='POST'){
 			$user=array(

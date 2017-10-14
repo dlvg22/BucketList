@@ -7,11 +7,11 @@ class Bucket extends CI_Controller {
 		public function __construct()
 	{
 		parent:: __construct();
-<<<<<<< HEAD
+
 	
 		
-=======
->>>>>>> 980fa1a75130c4abc617f4caebb042613d30cbb0
+
+
 	}
 	public function index()
 	{		
