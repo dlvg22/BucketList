@@ -39,10 +39,10 @@
 			</div>
 
 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 set">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
-				<?php $name="Franky"; ?>
-				<img src="<?php echo base_url('assets/images/franky.jpg'); ?>" class="account-icon img-circle " data-toggle="dropdown" alt="Picture" /><span id="name">
-				<?php echo $name; ?></span>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<?php $name="franj"; ?>
+				<p data-toggle="dropdown" class="dropdowner"><span id="name">
+				<?php echo $name; ?></span> <img src="<?php echo base_url('assets/images/franky.jpg'); ?>" class="account-icon img-circle"  alt="Picture" /><span class="caret"></span></p>
 				 <ul class="dropdown-menu" role="menu">
     			  <li role="presentation"><a role="menuitem" href="#"><span class="glyphicon glyphicon-User"></span> Profile</a></li>
     			  <li role="presentation"><a role="menuitem" href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
