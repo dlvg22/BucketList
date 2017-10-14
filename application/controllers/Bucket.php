@@ -3,16 +3,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Bucket extends CI_Controller {
 	
+		
 		public function __construct()
 	{
 		parent:: __construct();
-		
-		$this->load->model('bucket_model','login');
+	
 		
 	}
-	
 	public function index()
 	{		
+			
 			
 			if( $_SERVER['REQUEST_METHOD']=='POST'){
 			
@@ -53,11 +53,12 @@ class Bucket extends CI_Controller {
 			
 	}
 	
+	
+	
 	public function profile()
 	{
 		$data['title']="Profile";
 		$this->load->view('template/header',$data);
-		$this->load->view('template/navigation',$data);
 		$this->load->view('template/sidebar-home');
 		$this->load->view('bucket/profile-view');
 		$this->load->view('template/footer');
@@ -65,14 +66,22 @@ class Bucket extends CI_Controller {
 	
 	
 	public function home()
-	{
+	{	
+		if(isset($_SESSION['username'])||isset($_SESSION['Email']) && isset($_SESSION['passwword'])){
 		$data['title']="Home";
+	
 		$this->load->view('template/header',$data);
 		$this->load->view('template/navigation',$data);
 		$this->load->view('template/sidebar-home');
 		$this->load->view('bucket/bucketwall');
 		$this->load->view('template/right-panel');
 		$this->load->view('template/footer');
+		}
+	else{
+		redirect('Login','refresh');
+		
+		
+	}
 	
 	}
 		public function settings()
@@ -89,10 +98,10 @@ class Bucket extends CI_Controller {
 	
 	public function story()
 	{
-		$data['title']="story";
+		$data['title']="Story";
 	
 		$this->load->view('template/header',$data);
-		$this->load->view('bucket/story');
+		$this->load->view('bucket/thumbnail');
 		$this->load->view('template/footer');
 
 		

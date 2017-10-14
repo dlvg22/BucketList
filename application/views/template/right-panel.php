@@ -1,6 +1,6 @@
 <div class="col-md-3 default-space">
 
-<div class="events ">
+<div class="events borders">
 	
 	<span class="glyphicon glyphicon-pushpin icon-color "></span><b>Upcoming events</b>
 	<a href="#"><div class="col-md-10 col-md-offset-1 text-center"><img id="event-photo" src="<?php echo base_url('assets/images/bohol.jpg'); ?>">
@@ -13,7 +13,7 @@
 	</div> </a>
 </div> 
 
-<div class="home-list">
+<div class="home-list borders">
 
 	<table class="table table-responsive table-hover rmv-padding">
 	<thead>

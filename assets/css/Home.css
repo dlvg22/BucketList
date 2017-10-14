@@ -36,24 +36,25 @@
 	padding:4!important;
 	
 }
-.photo-template{
-		
+.emphasize-dark {
+	box-shadow: 0 0 2px 1px rgba(0,0,0,.35);
+  
+ 
+}
+.borders{
 	
-	background-color:white;
-	height:250px;
-	padding:4!important;
-	
+	box-shadow: 0 0 5px 1px #b0afaf;
 	
 }
 .user-image{
-	width:215px;
-	height:195px;
-	
-	
+	width:225px;
+	height:200px;
+	  border: 3px solid black;
 }
 
 .user-name{
 	font-size:20px;
+	margin-left:5px;
 }
 p.user-name{
 	padding-top:4px;
@@ -62,6 +63,7 @@ p.user-name{
 p.user-acc{
 		line-height:10%;
 		color:#b8b6b6;
+		margin-left:5px;
 }
 .home-about{
 	margin-top:5px;
@@ -317,7 +319,7 @@ p.user-acc{
 .timeline{
 	height:210px;
 	margin-bottom:1px;
-	
+		
 	background-color:white;
 	
 	
@@ -337,6 +339,28 @@ p.user-acc{
 		border-top:1px solid  #b0afaf;
 		padding:2px;
 }
+.change-photo{
+	position:absolute;
+	z-index:2;
+	left:5px;
+	top:5px;
+	width:215px;
+	height:190px;
+	background-color:black;
+	color:white;
+	bottom:0;
+	padding-left:10px;
+	padding-top:90px;
+	font-size:16px;
+	opacity:0.35;
+}
+.change-hide{
+	visibility:hidden
+}
+
+
+
+
 .reaction-icon{
 	
 	color:#black;
@@ -374,12 +398,12 @@ p.user-acc{
 .friend-list{
 	
   margin-top:5px;
-	background-color:#edfbe9;
+	background-color:white;
 	height:300px;
 	padding:5px;
 	font-size:15px;
 	
-		border: 1px solid #b0afaf;
+	
 }
 #image {
   
@@ -413,7 +437,7 @@ p.user-acc{
 	background-color:white;
 
 	height:230px;
-		border: 1px solid #b0afaf;
+		
 	padding:5px;
 	margin-bottom:5px;
 	
