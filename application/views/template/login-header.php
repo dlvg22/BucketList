@@ -125,13 +125,13 @@
 							
 
                             </div>
-				    	    
+					</form>
 				        </div>
-                    </form>
-                 <?=form_open('Facebook/login')?>
+                    <!---
+                 form_open('Facebook/login')
 				 <input type="hidden" name="url"></input>
-                <button type="submit" value="<?php  echo base_url('Facebook/callback');?>" ><img src="<?php echo base_url('assets/images/loginfb.png');?>"></button>
-				</form>
+                <button type="submit" value="base_url('Facebook/callback');?>" ><img src="<o base_url('assets/images/loginfb.png');?>"></button>
+				</form>-->
                 </div>
                 
                 
@@ -184,7 +184,7 @@
         		    	</div>
 				        <div class="modal-footer">
                             <div>
-                                <button type="submit" id="reg" class="btn btn-primary btn-lg btn-block">SIGN UP</button>
+                                <button type="submit" id="reg" class="btn btns btn-lg btn-block">SIGN UP</button>
                             </div>
 				    	    
 				        </div>
@@ -200,12 +200,12 @@
 	
 <script type="text/javascript">
 
-        var uname = false;
-        var uemail = false;
-        var uword = false;
-        var uword2 = false;
 $(document).ready(function(){
-	
+		$('#reg').prop('disabled', 'disabled');
+        var uname=false;
+        var uemail=false;
+        var uword=false;
+        var uword2=false;
  $("#user_name").keyup(function(){
   if($("#user_name").val().length >=5)
   {
@@ -216,20 +216,23 @@ $(document).ready(function(){
    success: function(msg){
     if(msg=="true")
     {	
-	
-			
+
 		$("#usr_verify").removeClass('has-error');
 		$("#usr_verify").addClass('has-success');
 		$("#usr_verify").append(' <span id="okay" class="glyphicon glyphicon-ok form-control-feedback"></span>');
 
 		$('span[id^="notok"]').remove();
+		
+		uname = true;
+		changeStatus();
 	
     }
     else if(msg=="false")
     {
 		$("#usr_verify").addClass('has-error');
 		$("#usr_verify").append('<span id="notok" class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
-			uname=false;
+				 uname=false;
+				 changeStatus();
 		$('span[id^="okay"]').remove();
     }
    }
@@ -243,9 +246,14 @@ $(document).ready(function(){
 		
 		$('span[id^="notok"]').remove();		
 		$('span[id^="okay"]').remove();
-				uname=false;
+		 uname=false;
+				 changeStatus();
+			
   }
  });
+
+ 
+ 
  
   $("#email").keyup(function(){
   if($("#email").val().length >=5)
@@ -253,18 +261,16 @@ $(document).ready(function(){
   $.ajax({
    type: "POST",
    url: "<?php echo base_url();?>Login/check_user",
-   data: "name="+$("#email").val(),
+   data: "email="+$("#email").val(),
    success: function(msg){
     if(msg=="true")
     {	
-
-				
-			
 		$("#usr_email").removeClass('has-error');
 		$("#usr_email").addClass('has-success');
-		$("#usr_email").append(' <span id="okay2" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+		$("#usr_email").append(' <span id="useremail" class="glyphicon glyphicon-ok form-control-feedback"></span>');
 
 		uemail=true;
+		changeStatus();
 		$('span[id^="myemail"]').remove();
 	
     }
@@ -272,9 +278,9 @@ $(document).ready(function(){
     {
 		$("#usr_email").addClass('has-error');
 		$("#usr_email").append('<span id="myemail" class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
-		
 			uemail=false;
-		$('span[id^="okay2"]').remove();
+			changeStatus();
+		$('span[id^="useremail"]').remove();
 		
     }
    }
@@ -287,7 +293,9 @@ $(document).ready(function(){
 		$("#usr_email").removeClass('has-success');
 			$('span[id^="myemailok"]').remove();
 				uemail=false;
+			    changeStatus();
 		$('span[id^="myemail"]').remove();
+		$('span[id^="useremail"]').remove();
   }
  });
  
@@ -301,6 +309,7 @@ $(document).ready(function(){
 					$("#usr_password").append(' <span id="okay5" class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
 					$('span[id^="okay6"]').remove();
 					uword=false;
+					changeStatus();
                 
           
         }
@@ -309,8 +318,10 @@ $(document).ready(function(){
              $("#usr_password").removeClass('has-error');
 					$("#usr_password").addClass('has-success');
 					$("#usr_password").append(' <span id="okay6" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+							
 							$('span[id^="okay5"]').remove();
 				uword=true;
+				changeStatus();
             }
     });
     
@@ -323,8 +334,10 @@ $(document).ready(function(){
 					$("#usr_password2").removeClass('has-success');
 					$("#usr_password2").addClass('has-error');
 					$("#usr_password2").append(' <span id="okay3" class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
+			
 					$('span[id^="okay4"]').remove();
                 uword2=false;
+				changeStatus();
                 
             }
 			
@@ -332,13 +345,38 @@ $(document).ready(function(){
                $("#usr_password2").removeClass('has-error');
 					$("#usr_password2").addClass('has-success');
 					$("#usr_password2").append(' <span id="okay4" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+					$("#usr_password2").append(' <span id="okay4"></span>');
 							$('span[id^="okay3"]').remove();
+							$('span[id^="weak"]').remove();
 		   uword2=true;
+		   changeStatus();
             }
         }
+		else{
+			
+			
+			 uword2=false;
+				changeStatus();
+		}
+	
     });
+	
+	function changeStatus(){
+    if(!uname||!uemail||!uword||!uword2){
+		$('#reg').prop('disabled', 'disabled');
+      		
+    } else{
+			$('#reg').prop('disabled', false);
+    }
+}
+
 		
-  
- 
+		
+
+		
 });
+
+
+
+
 </script>

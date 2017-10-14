@@ -3,26 +3,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 	
-		
 		public function __construct()
 	{
 		parent:: __construct();
 		
 		$this->load->model('login_model','login');
 		
-		
 	}
-	
-	
+
 	public function index()
 	{
-
 		if(isset($_SESSION['username'])||isset($_SESSION['email'])&&isset($_SESSION['password']))
 		{
 			redirect('Bucket/home','refresh');
 		}
 		else{
-
 		$data['title']="BucketList";
 			if($_SERVER['REQUEST_METHOD']=='POST'){
 			$user=array(
@@ -93,17 +88,30 @@ class Login extends CI_Controller {
 	
 	public function check_user()
 		{
-			
-		 $usr=$this->input->post('name');
-		 $result=$this->login->check_user_exist($usr);
-		
-		 if($result>0)
-		 {
-			 
-		 echo 'false';
-		  }
-		 else{
-		   echo	 'true';
-		  }
+		$data=array(
+		array('name','name','required|trim|is_unique[users.username]'),
+		array('email','email','required|valid_email|trim|is_unique[users.Email]'));
+		$this->form_validation->set_rules($data);
+			if ($this->form_validation->run()===FALSE){
+				echo 'false';
 		}
+		else{
+			
+					 // $usr=$this->input->post('name');
+		 // $result=$this->login->check_user_exist($usr);
+		
+		 // if($result>0)
+		 // {
+			 
+		 // echo 'false';
+		  // }
+		 // else{
+		   echo	 'true';
+		  // }
+			
+		// }
+		}
+		}
+		
 }
+
