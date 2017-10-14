@@ -132,8 +132,8 @@ html,body{
 }
 
 .navi a:hover{
-  color: #295CD4;
-  border-bottom: 3.5px solid blue;
+  color: #A75800;
+  border-bottom: 3.5px solid #A75800;
 }
 
 .sbar{
@@ -165,12 +165,16 @@ html,body{
   font-size: 20px;
   font-family: Verdana;
 }
-
 .account-icon{
   cursor: pointer;
   height: 30px;
   width: 25px;
 }
+.dropdowner:hover .caret{
+  color: white;
+  cursor: pointer;
+}
+
 .dropdown-menu li{
   margin: 0;
   padding: 0;
