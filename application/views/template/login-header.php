@@ -111,6 +111,7 @@
 				    		
 				    		<p><input name="user" class="form-control" type="text" placeholder="username/Email" required></p>
 				    		<p><input name="pwrd" class="form-control" type="password" placeholder="Password" required></p>
+							
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox"> Remember me
@@ -119,13 +120,18 @@
         		    	</div>
 				        <div class="modal-footer">
                             <div>
+							
                                 <button type="submit" class="btn btns btn-lg btn-block">Login</button>
+							
+
                             </div>
 				    	    
 				        </div>
                     </form>
-                 
-                    
+                 <?=form_open('Facebook/login')?>
+				 <input type="hidden" name="url"></input>
+                <button type="submit" value="<?php  echo base_url('Facebook/callback');?>" ><img src="<?php echo base_url('assets/images/loginfb.png');?>"></button>
+				</form>
                 </div>
                 
                 

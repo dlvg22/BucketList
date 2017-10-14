@@ -4,6 +4,8 @@
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/Home.css"); ?>">
 		<link rel="stylesheet" href="<?php echo base_url("assets/css/achievements.css"); ?>">
 		<link rel="stylesheet" href="<?php echo base_url("assets/css/profile.css"); ?>">
+		<link rel="stylesheet" href="<?php echo base_url("assets/css/slider.css"); ?>">
+		<link rel="stylesheet" href="<?php echo base_url("assets/css/thumbnail.css"); ?>">
 	<link href="<?php echo base_url('assets/css/default.css');?>" rel="stylesheet" type="text/css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link href="<?php echo base_url("assets/css/style.css"); ?>" rel="stylesheet" type="text/css">
