@@ -45,28 +45,46 @@ I have faith in what I see
 Now I know I have met an angel in person
 And she looks perfect
 I dont deserve this
+
+You look perfect tonight
+Baby, Im dancing in the dark, with you between my arms
+Barefoot on the grass, listening to our favorite song
+I have faith in what I see
+Now I know I have met an angel in person
+And she looks perfect
+I dont deserve this
 You look perfect tonight';
 ?>
+
 <div class="story-wrapper">
 <div class="row">
-<div class="col-md-3 tab">
+<div class="col-md-12 story-header">
+
+</div>
+<div class="col-md-1">
+</div>
+<div class="col-md-3 tab" >
+
   <div class="col-md-12 column">
     <img src="<?php echo base_url('assets/images/franky.jpg'); ?>" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
 	</div>
   <div class="col-md-12 column">
     <img src="<?php echo base_url('assets/images/luffy1.jpg'); ?>" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-	
- </div>
+
+</div>
+
   <div class="col-md-12 column">
     <img src="<?php echo base_url('assets/images/luffy2.jpg'); ?>" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
   </div>
   <div class="col-md-12 column">
     <img src="<?php echo base_url('assets/images/luffy3.jpg'); ?>" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-  </div>
+
 </div>
-	<div class="col-md-8 story">
+</div>
+	<div class="col-md-7 story">
 		
-		<h3><?php echo $btitle ?></h3>
+		<h2><?php echo $btitle ?></h2>
+
 		<p><?php echo $desc; ?></p>
 	</div>
 
@@ -77,12 +95,16 @@ You look perfect tonight';
 
     <div class="mySlides">
       <div class="numbertext"></div>
-      <img src="<?php echo base_url('assets/images/franky.jpg'); ?>" style="width:100%" class="img-size">
+
+
     </div>
 
     <div class="mySlides">
       <div class="numbertext"></div>
       <img src="<?php echo base_url('assets/images/luffy1.jpg'); ?>" style="width:100%" class="img-size">
+
+      
+
     </div>
 
     <div class="mySlides">
@@ -93,7 +115,11 @@ You look perfect tonight';
     <div class="mySlides"> 
       <div class="numbertext"></div>
       <img src="<?php echo base_url('assets/images/luffy3.jpg'); ?>" style="width:100%" class="img-size">
+
+			
     </div>
+   
+
     
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -117,4 +143,8 @@ You look perfect tonight';
     </div>
   </div>
 </div>
+
+
 </div>
+</div>
+

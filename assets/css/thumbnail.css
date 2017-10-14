@@ -1,6 +1,7 @@
 .row > .column {
   padding: 0 8px;
-  width:20%;
+
+
 }
 
 .row:after {
@@ -14,7 +15,8 @@
   width: 25%;
   margin-top:10px;
   margin-bottom:10px;
-  height:30%;
+
+
 }
 
 
@@ -31,7 +33,9 @@
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.9);
 }
-}
+
+
+
 
 
 .modal-content {
@@ -150,18 +154,49 @@ img.hover-shadow {
 }
 
 
+
+
 .tab{
-	margin-left:40px;
+	margin-left:10px;
 	border: 2px solid black;
+	width:100%;
+	max-height:80%;
+	background-color:black;
+	overflow:auto!important;
+	position:relative;
+	}
 	 
 	 
+
+.hover-shadow{
+	height:30%;
+	width:100%;
 }
 
+
+
 .story{
-	
+	border: 2px solid black;
+	min-height:80%;
+	background-color:white;
+	height:80%;
+	font-size:40px;
+	overflow:auto!important;
+	width:100%;
+
 }
 
 .story-wrapper{
 	width:100%;
-	background-color:lightgray;
+
+
+	background-color:#f0f5f5;
+
 }
+
+.story-header{
+	width:100%;
+	background-color:cyan;
+	height:15%;
+}
+
