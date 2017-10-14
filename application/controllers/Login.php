@@ -3,21 +3,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 	
+		
 		public function __construct()
 	{
 		parent:: __construct();
 		
 		$this->load->model('login_model','login');
 		
+		
 	}
-
+	
+	
 	public function index()
 	{
+
 		if(isset($_SESSION['username'])||isset($_SESSION['email'])&&isset($_SESSION['password']))
 		{
 			redirect('Bucket/home','refresh');
 		}
 		else{
+
 		$data['title']="BucketList";
 			if($_SERVER['REQUEST_METHOD']=='POST'){
 			$user=array(

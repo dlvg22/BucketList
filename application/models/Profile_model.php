@@ -17,8 +17,31 @@ class Profile_model extends CI_Model{
 		
 		}
 	
+	public function getUser($username){
+
+			$sql = "
+            SELECT * FROM user
+            WHERE username LIKE '%$username%'
+            
+        ";
+
+        $query = $this->db->query($sql);
+        return $query->result();
+		
+		}
 	
-	
+	public function updateSettings($username, $field, $newnickname){
+		$sql = "
+		
+		UPDATE user SET $field='$newnickname' 
+		WHERE username LIKE '%$username%'
+        
+        ";
+
+        $query = $this->db->query($sql);		
+		}	
+
+
 	public function read($condition = null) {
 		$this->db->select('*');
 		$this->db->from($this->table);
