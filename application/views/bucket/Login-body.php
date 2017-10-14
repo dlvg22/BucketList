@@ -17,7 +17,7 @@
 				</div>
 			</div>
 			<div class="item mycarousel rmv-padding">
-				<img src="<?=base_url('assets/images/bohol.jpg')?>"  class="photo-slide" alt="Third Slide">
+				<img src="<?=base_url('assets/images/signupCarousel.png')?>"  class="photo-slide" alt="Third Slide">
 			   
 			</div>
 		</div>
@@ -39,40 +39,40 @@
 		<div class="col-md-12 text-center logo-text" id="myIdeas">BUCKET IDEAS</div> 
 			
 			<div class="col-md-offset-1 col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/bohol.jpg')?>" class="img-responsive ideas-photo">
-				<div class="post-content">BOHOL ESCAPADE</div>
+				<img src="<?=base_url('assets/images/nba.jpg')?>" class="img-responsive ideas-photo">
+				<div class="post-content">JOIN NBA	</div>
 			</div>
 					<div class=" col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/bohol.jpg')?>" class="img-responsive ideas-photo">
-				<div class="post-content">BOHOL ESCAPADE</div>
+				<img src="<?=base_url('assets/images/savings.jpg')?>" class="img-responsive ideas-photo">
+				<div class="post-content">SAVE MONEY</div>
 			</div>
 					<div class=" col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/bohol.jpg')?>" class="img-responsive ideas-photo">
-				<div class="post-content">BOHOL ESCAPADE</div>
+				<img src="<?=base_url('assets/images/scuba.jpg')?>" class="img-responsive ideas-photo">
+				<div class="post-content"></div>
 				</div>
 				
 				<div class="col-md-offset-1 col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/bohol.jpg')?>" class="img-responsive ideas-photo">
+				<img src="<?=base_url('assets/images/influence.jpg')?>" class="img-responsive ideas-photo">
 				<div class="post-content">BOHOL ESCAPADE</div>
 				</div>
 					<div class=" col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/bohol.jpg')?>" class="img-responsive ideas-photo">
+				<img src="<?=base_url('assets/images/facebook.jpg')?>" class="img-responsive ideas-photo">
 				<div class="post-content">BOHOL ESCAPADE</div>
 				</div>
 					<div class=" col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/bohol.jpg')?>" class="img-responsive ideas-photo">
+				<img src="<?=base_url('assets/images/bday.jpg')?>" class="img-responsive ideas-photo">
 				<div class="post-content">BOHOL ESCAPADE</div>
 				</div>
 					<div class="col-md-offset-1 col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/bohol.jpg')?>" class="img-responsive ideas-photo">
+				<img src="<?=base_url('assets/images/google.jpg')?>" class="img-responsive ideas-photo">
 				<div class="post-content">BOHOL ESCAPADE</div>
 				</div>
 					<div class=" col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/bohol.jpg')?>" class="img-responsive ideas-photo">
+				<img src="<?=base_url('assets/images/sponsor.jpg')?>" class="img-responsive ideas-photo">
 				<div class="post-content">BOHOL ESCAPADE</div>
 				</div>
 				<div class=" col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/bohol.jpg')?>" class="img-responsive ideas-photo">
+				<img src="<?=base_url('assets/images/cong.jpg')?>" class="img-responsive ideas-photo">
 				<div class="post-content">BOHOL ESCAPADE</div>
 				</div>
 				

@@ -261,7 +261,7 @@ $(document).ready(function(){
   $.ajax({
    type: "POST",
    url: "<?php echo base_url();?>Login/check_user",
-   data: "name="+$("#email").val(),
+   data: "email="+$("#email").val(),
    success: function(msg){
     if(msg=="true")
     {	
