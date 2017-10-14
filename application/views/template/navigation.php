@@ -45,9 +45,9 @@
 				<?php echo $name; ?></span> <img src="<?php echo base_url('assets/images/franky.jpg'); ?>" class="account-icon img-circle"  alt="Picture" /><span class="caret"></span></p>
 				 <ul class="dropdown-menu" role="menu">
     			  <li role="presentation"><a role="menuitem" href="#"><span class="glyphicon glyphicon-User"></span> Profile</a></li>
-    			  <li role="presentation"><a role="menuitem" href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+    			  <li role="presentation"><a role="menuitem" href="<?=base_url('Bucket/settings')?>"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
     			  <li role="presentation" class="divider"></li>
-  			  	  <li role="presentation"><a role="menuitem" href="#"><span class="glyphicon glyphicon-off"></span> Log Out</a></li>    
+  			  	  <li role="presentation"><a role="menuitem" href="<?=base_url('Login/logout')?>"><span class="glyphicon glyphicon-off"></span> Log Out</a></li>    
     			</ul>
 
 				</div>
