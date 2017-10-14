@@ -88,24 +88,24 @@ class Login extends CI_Controller {
 	
 	public function check_user()
 		{
-		$data=array(
-		array('name','name','required|trim|is_unique[users.username]'),
-		array('email','email','required|valid_email|trim|is_unique[users.Email]'));
-		$this->form_validation->set_rules($data);
-			if ($this->form_validation->run()===FALSE){
-				echo 'false';
-		}
-		else{
+		// $data=array(
+		// array('name','name','required|trim|is_unique[users.username]'),
+		// array('email','email','required|valid_email|trim|is_unique[users.Email]'));
+		// $this->form_validation->set_rules($data);
+			// if ($this->form_validation->run()===FALSE){
+				// echo 'false';
+		// }
+		// else{
 			
-					 // $usr=$this->input->post('name');
-		 // $result=$this->login->check_user_exist($usr);
+					 $usr=$this->input->post('name');
+		 $result=$this->login->check_user_exist($usr);
 		
-		 // if($result>0)
-		 // {
+		 if($result>0)
+		 {
 			 
-		 // echo 'false';
-		  // }
-		 // else{
+		 echo 'false';
+		  }
+		 else{
 		   echo	 'true';
 		  // }
 			
