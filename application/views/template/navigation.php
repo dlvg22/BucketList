@@ -28,11 +28,11 @@
 			</div>
 
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-5 sbar">
-				<form>
+				<form action="<?php echo base_url('bucket/search');?>" id="form1" method="get">
   					<div class="input-group bar">
-  					<input type="search"  class="form-control input" placeholder="Search"/>
-					<span class="input-group-addon barbutton">
-					<i class="glyphicon glyphicon-search"></i>
+  					<input type="search"  class="form-control input searcher" name="search" placeholder="Search"/>
+					<span class="input-group-addon barbutton" >
+					<i class="glyphicon glyphicon-search" onClick="form1.submit();" type="button" ></i>
 					</span>
 				</div>
    				</form>
@@ -62,11 +62,7 @@
     $(this).dropdown();});
 });
 
-				$(document).ready(function(){
-    			$("search").search(function(){
-   			     $(".barbutton").addClass("ColoredButton");
- 			   });
-				});	 
+		 
 			 
 
   	$('.bar').click(function(e) {
@@ -74,4 +70,7 @@
   	});
 	$('.bar').focusout(function() {
         $('.barbutton').removeClass("ColoredButton");
-	});</script>
+	});
+	
+
+</script>
