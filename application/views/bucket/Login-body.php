@@ -81,16 +81,16 @@
 	
 	<div class="bucket-login img-wrapper col-md-12 col-sm-12 rmv-padding  " id="achievements">
 	<div  class="col-md-12 rmv-padding featured"> 
-	<img src="<?=base_url('assets/images/photoslider1.png')?>" class="img-responsive col-md-12 rmv-padding login-photos">
-	<button class="readmore">View Full story</button> 
+	<img src="<?=base_url('assets/images/photoslider1updated.png')?>" class="img-responsive col-md-12 rmv-padding login-photos">
+	<button class="readmore" data-toggle="modal" data-target="#showSignup">View Full story</button> 
 	</div>
 	<div  class="col-md-12 rmv-padding featured"> 
-	<img src="<?=base_url('assets/images/photoslider2.png')?>" class="img-responsive col-md-12 rmv-padding login-photos">
-	<button class="readmore2">View Full story</button> 
+	<img src="<?=base_url('assets/images/photoslider2updated.png')?>" class="img-responsive col-md-12 rmv-padding login-photos">
+	<button class="readmore2" data-toggle="modal" data-target="#showSignup">View Full story</button> 
 	</div>
 	<div  class="col-md-12 rmv-padding featured"> 
-	<img src="<?=base_url('assets/images/photoslider3.png')?>" class="img-responsive col-md-12 rmv-padding login-photos">
-	<button class="readmore">View Full story</button> 
+	<img src="<?=base_url('assets/images/photoslider3updated.png')?>" class="img-responsive col-md-12 rmv-padding login-photos">
+	<button class="readmore" data-toggle="modal" data-target="#showSignup">View Full story</button> 
 	</div>
 	</div>
 	
