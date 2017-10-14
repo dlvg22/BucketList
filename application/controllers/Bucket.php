@@ -83,15 +83,22 @@ class Bucket extends CI_Controller {
 	}
 		public function settings()
 	{
+		$user =$this->input->get('username');
+	    $this->load->model('Profile_model','profile');
+			 	
+	 	$userinfo = $this->profile->getUser($user);
+
 		$data['title']="Settings";
-	
+		if(isset($userinfo))
+		{
 		$this->load->view('template/header',$data);
 		$this->load->view('template/navigation');
-		$this->load->view('bucket/settings');
+		$this->load->view('bucket/settings',['userinfo'=>$userinfo]);
 		$this->load->view('template/footer');
-
-		
-			
+		}
+		else
+		echo "no results found";			
+	
 	}
 	
 	public function story()
@@ -100,12 +107,28 @@ class Bucket extends CI_Controller {
 	
 		$this->load->view('template/header',$data);
 		$this->load->view('bucket/story');
-		$this->load->view('template/footer');
-
-		
-			
+		$this->load->view('template/footer');			
 	}
 	
+	public function update($username,$field)
+	{
+		$this->load->model('Profile_model','profile');
+		$data['title']='Updated';
+		$newnickname =$this->input->post('newdata');
+		
+		if($newnickname==null)
+		{
+
+		$newnickname =$this->input->post('newuser');
+		$this->profile->updateSettings($username, $field, $newnickname);
+		redirect('bucket/settings?username='.$newnickname.'');
+		
+		}
+		else{
+		$this->profile->updateSettings($username, $field, $newnickname);
+		redirect('bucket/settings?username='.$username.'');}
+	}
+
 	public function search()
 	{
 		$this->load->model('Profile_model','profile');
