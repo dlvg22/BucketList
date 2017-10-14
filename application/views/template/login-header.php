@@ -125,13 +125,13 @@
 							
 
                             </div>
-				    	    
+					</form>
 				        </div>
-                    </form>
-                 <?=form_open('Facebook/login')?>
+                    <!---
+                 form_open('Facebook/login')
 				 <input type="hidden" name="url"></input>
-                <button type="submit" value="<?php  echo base_url('Facebook/callback');?>" ><img src="<?php echo base_url('assets/images/loginfb.png');?>"></button>
-				</form>
+                <button type="submit" value="base_url('Facebook/callback');?>" ><img src="<o base_url('assets/images/loginfb.png');?>"></button>
+				</form>-->
                 </div>
                 
                 

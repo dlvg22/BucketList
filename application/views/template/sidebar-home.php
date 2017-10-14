@@ -12,9 +12,9 @@
 			$birthday="April 22,1998";
 			$work="Programmer/developer";
 			
-			echo '<p class="user-name">".$user_profile['first_name']."</p>';
+			echo '<p class="user-name">'.$name.'</p>';
 			echo '<p class="user-acc">'.$user.'</p>';
-			echo '<p>Facebook URL : "."<a href=".$user_profile['link']." target='_blank'"."> https://www.facebook.com/".$user_profile['id']."</a></p>';
+			// echo '<p>Facebook URL : "."<a href="'.$user_profile['link'].'" target='_blank'"."> https://www.facebook.com/".$user_profile['id']."</a></p>';
 
 			?>
 			</div>
