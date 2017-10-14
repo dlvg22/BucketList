@@ -3,13 +3,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Bucket extends CI_Controller {
 	
+		
 		public function __construct()
 	{
 		parent:: __construct();
-	}
+
 	
+		
+
+
+	}
 	public function index()
 	{		
+			
 			
 			if( $_SERVER['REQUEST_METHOD']=='POST'){
 			
@@ -50,6 +56,8 @@ class Bucket extends CI_Controller {
 			$this->load->view('template/footer');
 			
 	}
+	
+	
 	
 	public function profile()
 	{
@@ -103,10 +111,10 @@ class Bucket extends CI_Controller {
 	
 	public function story()
 	{
-		$data['title']="story";
+		$data['title']="Story";
 	
 		$this->load->view('template/header',$data);
-		$this->load->view('bucket/story');
+		$this->load->view('bucket/thumbnail');
 		$this->load->view('template/footer');			
 	}
 	
@@ -118,6 +126,9 @@ class Bucket extends CI_Controller {
 		
 		if($newnickname==null)
 		{
+
+		$this->load->view('bucket/thumbnail');
+		$this->load->view('template/footer');
 
 		$newnickname =$this->input->post('newuser');
 		$this->profile->updateSettings($username, $field, $newnickname);
