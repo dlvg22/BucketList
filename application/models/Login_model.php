@@ -15,6 +15,7 @@ class Login_model extends CI_Model {
 		$this->db->select('*');
 		$this->db->from('users');
 		$this->db->join('profile', 'profile.userID = users.userID');
+	
 		if( isset($condition) ) 
 		{
 			

@@ -66,9 +66,9 @@ p.user-acc{
 		margin-left:5px;
 }
 .home-about{
-	margin-top:5px;
-	background-color:white;
-	height:180px;
+	margin-top:170px;
+	width:230px;
+	height:200px;
 	padding:5px;
 	font-size:15px;
 	
@@ -339,24 +339,6 @@ p.user-acc{
 		border-top:1px solid  #b0afaf;
 		padding:2px;
 }
-.change-photo{
-	position:absolute;
-	z-index:2;
-	left:5px;
-	top:5px;
-	width:215px;
-	height:190px;
-	background-color:black;
-	color:white;
-	bottom:0;
-	padding-left:10px;
-	padding-top:90px;
-	font-size:16px;
-	opacity:0.35;
-}
-.change-hide{
-	visibility:hidden
-}
 
 
 
@@ -446,14 +428,14 @@ p.user-acc{
 	position: absolute;
     z-index: 5;
     color: white;
-	margin-bottom:30!important;
+	
 	
 	
 }
 #upload{
-	 position: relative;
+	position: relative;
     top: 170px; 
-	visibility:hidden;
+	bottom:100px;
 	border-bottom-left-radius:15px;
 	border-bottom-right-radius:15px;
 	left: 0px;
@@ -463,4 +445,12 @@ p.user-acc{
 	font-size:20px;
     background: rgba(255,255,255,0.5);
 	z-index:10;
+	cursor:pointer;
 }
+
+.hideupload{
+	cursor:pointer;
+	visibility:hidden;
+
+}
+

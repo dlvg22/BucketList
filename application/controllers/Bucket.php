@@ -8,6 +8,8 @@ class Bucket extends CI_Controller {
 	{
 		parent:: __construct();
 		$this->load->model('login_model','login');
+		$this->load->model('Upload_model','upl');
+		$this->load->model('Cover_model','uplb');
 	}
 	public function index()
 	{		
@@ -16,13 +18,22 @@ class Bucket extends CI_Controller {
 		$data['title']="Home";
 		
 		$details=$this->login->read($_SESSION['userID']);
+		$photos=$this->upl->read($_SESSION['userID']);
+	
+		if($photos!=null){
+			$name['dp']=$photos[0]['photoname'];
+		}
+		else{
+			$name['dp']='default';
+		}
 		$name['username']=$details[0]['username'];
 		$name['alias']=$details[0]['nickname'];
+		
 		
 		$this->load->view('template/header',$data);
 		$this->load->view('template/navigation',$name);
 		$this->load->view('template/sidebar-home',$name);
-		$this->load->view('bucket/bucketwall');
+		$this->load->view('bucket/bucketwall',$name);
 		$this->load->view('template/right-panel');
 		$this->load->view('template/footer');
 		}
@@ -39,9 +50,29 @@ class Bucket extends CI_Controller {
 	public function profile()
 	{
 		$data['title']="Profile";
+				$details=$this->login->read($_SESSION['userID']);
+		$photos=$this->upl->read($_SESSION['userID']);
+		$cover=$this->uplb->read($_SESSION['userID']);
+		if($cover!=null){
+			$name['cp']=$cover[0]['covername'];
+		}
+		else{
+			$name['cp']='default';
+		}
+	
+		if($photos!=null){
+			$name['dp']=$photos[0]['photoname'];
+		}
+		else{
+			$name['dp']='default';
+		}
+		$name['username']=$details[0]['username'];
+		$name['alias']=$details[0]['nickname'];
+		
+		
 		$this->load->view('template/header',$data);
-		$this->load->view('template/navigation');
-		$this->load->view('template/sidebar-home');
+		$this->load->view('template/navigation',$name);
+		$this->load->view('template/sidebar-home',$name);
 		$this->load->view('bucket/profile-view');
 		
 	}
@@ -52,7 +83,21 @@ class Bucket extends CI_Controller {
 	    $this->load->model('Profile_model','profile');
 			 	
 	 	$userinfo = $this->profile->getUser($user);
-			
+				$photos=$this->upl->read($_SESSION['userID']);
+		$cover=$this->uplb->read($_SESSION['userID']);
+		if($cover!=null){
+			$name['cp']=$cover[0]['covername'];
+		}
+		else{
+			$name['cp']='default';
+		}
+	
+		if($photos!=null){
+			$name['dp']=$photos[0]['photoname'];
+		}
+		else{
+			$name['dp']='default';
+		}
 		$details=$this->login->read($_SESSION['userID']);
 		// Array ( [0] => Array ( [userID] => 1 [username] => dlvg22 [Email] => dlvg22@yahoo.com [password] => bucketlist ) )
 		$name['username']=$details[0]['username'];

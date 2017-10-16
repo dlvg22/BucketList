@@ -519,3 +519,16 @@ font-family:Arial;
 	
 	
 }
+
+#choosefile{
+	opacity:0;
+	position: absolute;
+	width:225px;
+		bottom:3px;
+	z-index: 1;
+		cursor:pointer;
+}
+.cam{
+		cursor:pointer; 
+	
+}

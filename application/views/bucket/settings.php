@@ -1,6 +1,6 @@
         <div class="row">
-        		<?php if(!null==$userinfo): ?>
-          <?php foreach ($userinfo as $userinfo){ ?>
+        		
+          
           <div class="col-md-offset-2 col-md-8 contents">
 					<h2>Account Settings</h2></br>
 					<?php 

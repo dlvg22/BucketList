@@ -1,6 +1,6 @@
 <div class="row topsider">
 			<div class="col-xs-1 col-sm-2 col-md-2 col-lg-2 col-xl-2 marker"> 
-				<div id="logo" class="img-responsive">	
+				<a href="<?=base_url('Bucket')?>"><div id="logo" class="img-responsive">	
 					<?xml version="1.0" encoding="utf-8"?>
 				
 					<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -17,7 +17,9 @@
 					</svg>
 				
 				</div>
+				
 			</div>
+			</a>
 			
 			<div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 col-xl-2 navi">
 				<p>
@@ -42,9 +44,10 @@
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 			
 				<p data-toggle="dropdown" class="dropdowner"><span id="name">
-				<?php echo $alias; ?></span> <img src="<?php echo base_url('assets/images/franky.jpg'); ?>" class="account-icon img-circle"  alt="Picture" /><span class="caret"></span></p>
+		
+				<?php echo $alias; ?></span> <img src="<?php if($dp!='default'){echo base_url('upload/'.$dp.'');}else{echo base_url('assets/images/'.$dp.'');}?>" class="account-icon img-circle"  alt="Picture" /><span class="caret"></span></p>
 				 <ul class="dropdown-menu" role="menu">
-    			  <li role="presentation"><a role="menuitem" href="#"><span class="glyphicon glyphicon-User"></span> Profile</a></li>
+    			  <li role="presentation"><a role="menuitem" href="<?=base_url('Bucket/profile')?>"><span class="glyphicon glyphicon-User"></span> Profile</a></li>
     			  <li role="presentation"><a role="menuitem" href="<?=base_url('Bucket/settings')?>"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
     			  <li role="presentation" class="divider"></li>
   			  	  <li role="presentation"><a role="menuitem" href="<?=base_url('Login/logout')?>"><span class="glyphicon glyphicon-off"></span> Log Out</a></li>    

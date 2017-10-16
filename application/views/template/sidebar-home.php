@@ -3,12 +3,18 @@
 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 default-space bigheader">
 			<div class="photo-template ">
 			<div id="">
-			<?php echo form_open_multipart('upload/do_upload');?>
-			
-			<img src="<?php echo base_url('assets/images/franky.jpg'); ?>" id="usr-img" class="user-image side-profilepict" />
-			<div id="upload" class="text-center"><span class="glyphicon glyphicon-camera"></span>Upload photo</div>
+			<?=form_open_multipart('Upload/displaypic', 'id="upload_now"');?>
+			<img src="<?php if($dp!='default'){echo base_url('upload/'.$dp.'');}else{echo base_url('assets/images/'.$dp.'');}?>" id="usr-img" class="user-image side-profilepict" />
+		
+			<div id="upload"  class="text-center">
+			<span class="glyphicon glyphicon-camera cam"></span>
+			<input type='file' id="choosefile" size="20" name="disp"></input>
+			</form> 
 			</div>
-			</form>
+	
+			</div>
+					
+
 			<?php
 			$name="Frank Ho";
 			$user="@papaFrank";
@@ -17,15 +23,15 @@
 			$birthday="April 22,1998";
 			$work="Programmer/developer";
 			
-			echo '<p class="user-name">'.$alias.'</p>';
-			echo '<p class="user-acc">'.'@'.$username.'</p>';
+		
 			// echo '<p>Facebook URL : "."<a href="'.$user_profile['link'].'" target='_blank'"."> https://www.facebook.com/".$user_profile['id']."</a></p>';
 
 			?>
 			</div>
 
-
-		<div >
+		<div class="home-about" >
+			<p class="user-name"><?=$alias?></p>
+			<p class="user-acc"><?='@'.$username?></p>
 			<span class="glyphicon glyphicon-user about-title icon-color"></span>&nbsp;<strong>About</strong>
 			<p class="text-center about-title"><?php echo $about; ?></p>
 			<hr>						
@@ -37,19 +43,72 @@
 		
 		</div>
 
-		   
 
-	</div>    
+			
+			
+			
+	
+	
+	
+	
+	
+			<?php if($this->session->userdata('error')!= null):?>
+	
+		
 
-		
-		<script>
-		
+	<div class="modal fade" id="errormodal" role="dialog">
+    <div class="modal-dialog">
+    
+
+      <div class="modal-content">
+        <div class="modal-body">
+          <p><?php print_r($_SESSION['error']);?></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+	</div>
+	
+	
+		<script type="text/javascript">
+		$(document).ready(function () {
+			$('#errormodal').modal('show');});
+</script>
+	
+	<?php endif;?>
+
+
+
+		 		 
+
+	</div>  
+	
+
+			<script>
+	
+				    $('#upload').addClass('hideupload');
 		$(".photo-template").hover(function(){
-			$("#upload").css('visibility', 'visible');
+			$("#upload").removeClass('hideupload');
+			
+		},function(){
+			    $('#upload').addClass('hideupload');
+			
 			
 		});
+		
+		
+	
 		</script>
-
+		<script>
+			$('#choosefile').change(function(){  
+			$('#upload_now').submit();
+			});
+		</script>
+		
+	
 	
 
 

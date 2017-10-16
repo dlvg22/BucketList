@@ -1,8 +1,42 @@
 
 /* profile */
 .user-cover{
-	margin-top:50px;
-	height:250px;
-	width:800px;
+	  width: 97%;
+  height: 220px;
+	position: absolute;
 	
+    color: white;
+}
+#cover{
+	position: relative;
+    top: 170px; 
+	height:50px;
+	padding:15px;
+	left: 78%;
+	width:200px;
+	z-index:100;
+	color:black;
+	font-size:20px;
+	border-top:1px solid black;
+	border-left:1px solid black;
+	
+    background: rgba(255,255,255,0.5);
+	z-index:10;
+	cursor:pointer;
+}
+.ptab{
+	
+	margin-top:160px;
+	
+}
+#choosecover{
+	opacity:0;
+	position: absolute;
+	width:225px;
+		bottom:3px;
+	z-index: 1;
+		cursor:pointer;
+}
+.info{
+	margin-bottom:30px;
 }
