@@ -3,7 +3,7 @@
 	
 	<div class="wall-post">
 	<div class="col-md-1 rmv-padding">
-	<img src="<?php echo base_url('assets/images/franky.jpg'); ?>" class="post-photo">
+	<img src="<?php if($dp!='default'){echo base_url('upload/'.$dp.'');}else{echo base_url('assets/images/'.$dp.'');}?>" class="post-photo">
 	</div>
 	<div class="col-md-11 rmv-padding">
 	<input type="text" class="post-title" id="title" placeholder="Title" data-toggle="modal" data-target="#myModal" ></input>

@@ -1,20 +1,25 @@
         <div class="row">
-        			<?php
-        			$data=array('email'=>'dlvg22google.com','nickname'=>'edu', 'username'=>'eduardoeduardo'); //dummy data
-					?>
+        		
+          
           <div class="col-md-offset-2 col-md-8 contents">
 					<h2>Account Settings</h2></br>
-					<table class="table-responsive table">
+					<?php 
+                $oldnickname=$userinfo->nickname;
+                $oldusername=$userinfo->username;
+                $oldemail=$userinfo->email;
+                $oldpassword=$userinfo->password;
+          ?>
+          <table class="table-responsive table">
           <tr><td>
 					<div class="item">
-					<p><b>Nickname: </b>&nbsp;<?php echo $data['nickname']; ?><span class="glyphicon glyphicon-pencil righter"></span></p>
+					<p><b>Nickname: </b>&nbsp;<?php echo $userinfo->nickname; ?><span class="glyphicon glyphicon-pencil righter"></span></p>
 					
 					<div class="menu-settings">
-						<form class="form-horizontal">
+						<form class="form-horizontal" method="post" action="<?php echo base_url(); ?>bucket/update/<?php echo $oldusername; ?>/<?php echo 'nickname'; ?>">
     					<div class="form-group">
       					 	<label for="inputNickname" class="control-label col-xs-3">New Nickname</label>
      					   	<div class="col-xs-6">
-            				<input type="name" class="form-control" id="inputEmail" placeholder="New Nickname">
+            				<input type="text" class="form-control" value="nickname"  id="inputEmail" placeholder="New Nickname" name="newdata">
         					</div>
     					  	<div class="col-xs-offset-3 col-xs-6s ">
             				<button type="submit" class="btn btn-primary">
@@ -30,13 +35,13 @@
 
           <tr><td>
     			<div class="item">
-					<p><b>Username: </b>&nbsp;<?php echo $data['username']; ?><span class="glyphicon glyphicon-pencil righter"></span></p>		
+					<p><b>Username: </b>&nbsp;<?php echo $oldusername; ?><span class="glyphicon glyphicon-pencil righter"></span></p>		
 					<div class="menu-settings">
-						<form class="form-horizontal">
+						<form class="form-horizontal" method="post" action="<?php echo base_url(); ?>bucket/update/<?php echo $oldusername; ?>/<?php echo 'username'; ?>">
     					<div class="form-group">
       					 	<label for="inputUsername" class="control-label col-xs-3">New Username</label>
      					   	<div class="col-xs-6">
-            				<input type="username" class="form-control" id="inputEmail" placeholder="New Username">
+            				<input type="username" class="form-control" id="inputEmail" placeholder="New Username" name="newuser">
         					</div>
     					   	<div class="col-xs-offset-3 col-xs-6s ">
             				<button type="submit" class="btn btn-primary">
@@ -51,36 +56,37 @@
 					</td></tr>
           <tr><td>
           <div class="item">
-          <p ><b>Email: </b>&nbsp;<?php echo $data['email']; ?><span class="glyphicon glyphicon-pencil righter"></span></p>
+          <p ><b>Email: </b>&nbsp;<?php echo $userinfo->email; ?><span class="glyphicon glyphicon-pencil righter"></span></p>
         
           <div class="menu-settings">
-            <form class="form-horizontal">
+            <form class="form-horizontal" method="post" action="<?php echo base_url(); ?>bucket/update/<?php echo $oldusername; ?>/<?php echo 'email'; ?>">
               <div class="form-group">
                   <label for="inputEmail" class="control-label col-xs-3">New email</label>
                   <div class="col-xs-6">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="New Email">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="New Email" name="newdata"/>
                   </div>
                   <div class="col-xs-offset-3 col-xs-6s ">
-                    <button type="submit" class="btn btn-primary">
-                    <span class="glyphicon glyphicon-edit"></span> Change
+                     <button type="submit" class="btn btn-primary ">
+                    <span class="glyphicon glyphicon-edit"></span>Change
                     </button>
                     <button class="btn btn-default closer">Cancel</button>
                   </div>
               </div>
           </form>
           </div>
-          </div></td>
-          </tr>
+          </div>
+          </td></tr>
+  
           <tr><td>
           <div class="item">
 					<p><b>Change Password </b><span class="glyphicon glyphicon-pencil righter"></span></p>		
 					<div class="menu-settings">
-						<form class="form-horizontal">
+						<form class="form-horizontal" method="post" action="<?php echo base_url(); ?>bucket/update/<?php echo $oldusername; ?>/<?php echo 'password'; ?>">
           				
     					<div class="form-group">
         					<label for="inputPassword" class="control-label col-xs-3">New Password</label>
        						<div class="col-xs-6">
-    				        <input type="password" class="input-md form-control" id="inputPassword" placeholder="Type new password here">
+    				        <input type="password" class="input-md form-control" id="inputPassword" placeholder="Type new password here" name="newdata">
         					</div>
     					
    					    	<div class="col-xs-offset-3 col-xs-6s ">
@@ -98,6 +104,9 @@
 
         </div>
         </div>
+        <?php } ?>
+<?php else: ?>
+  <?php endif; ?>
 <script>
     $('.menu-settings').hide();
     
@@ -116,6 +125,6 @@
               $(".menu-settings").hide();
               $(".item").removeClass("colored");
               });
-		
+	
 </script>
   

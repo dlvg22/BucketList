@@ -7,20 +7,23 @@ class Login_model extends CI_Model {
 	
 	public function create($data){
 		$this->db->insert($this->table,$data);
-		return TRUE;
+		return $insert_id = $this->db->insert_id();
 	}
 	
 	
 	public function read($condition = null) {
 		$this->db->select('*');
-		$this->db->from($this->table);
-		
+		$this->db->from('users');
+		$this->db->join('profile', 'profile.userID = users.userID');
+	
 		if( isset($condition) ) 
 		{
-			$this->db->where($condition);
+			
+			$this->db->where('users.userID',$condition);
+			
 		}
 		
-		$query = $this->db->get($this->table);
+		$query = $this->db->get();
 		
 		return $query->result_array();
 	}
@@ -35,24 +38,16 @@ class Login_model extends CI_Model {
 			  $this->db->where('password',$data['password']);
 			  $this->db->or_where('Email',$data['username']);
 			  $this->db->where('password',$data['password']);
-			
-		  return $query=$this->db->get();
+			 $query=$this->db->get();
+			return $query;
+
+		  
 	}
 	
-	public function signup($data){
-			$this->db->select('*');
-		    $this->db->where('username',$data['username']);
-		    $this->db->or_where('Email',$data['username']);
-			
-		
-		
-		
-	}
-	
-	public function check_user_exist($usr)
+	public function check_user($usr)
 {
-		 $this->db->where("username",$usr);
-		 $this->db->or_where("Email",$usr);
+		 $this->db->where("username",$usr['username']);
+		 $this->db->or_where("Email",$usr['username']);
 		 $query=$this->db->get($this->table);
 		 if($query->num_rows()>0)
 		 {
@@ -63,6 +58,21 @@ class Login_model extends CI_Model {
 		  return false;
 		 }
 }
+	public function check_pass($usr)
+{
+
+		 $this->db->where("password",$usr['userpass']);
+		 $query=$this->db->get($this->table);
+		 if($query->num_rows()>0)
+		 {
+		  return true;
+		 }
+		 else
+		 {
+		  return false;
+		 }
+}
+	
 	
 }
 
