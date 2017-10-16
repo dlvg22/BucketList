@@ -39,41 +39,41 @@
 		<div class="col-md-12 text-center logo-text" id="myIdeas">BUCKET IDEAS</div> 
 			
 			<div class="col-md-offset-1 col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/nba.jpg')?>" class="img-responsive ideas-photo">
+				<a href="" data-toggle="modal" data-target="#showLogin"><img src="<?=base_url('assets/images/nba.jpg')?>" class="img-responsive ideas-photo"></a>
 				<div class="post-content">JOIN NBA	</div>
 			</div>
 					<div class=" col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/savings.jpg')?>" class="img-responsive ideas-photo">
+				<a href="" data-toggle="modal" data-target="#showLogin"><img src="<?=base_url('assets/images/savings.jpg')?>" class="img-responsive ideas-photo"></a>
 				<div class="post-content">SAVE MONEY</div>
 			</div>
 					<div class=" col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/scuba.jpg')?>" class="img-responsive ideas-photo">
-				<div class="post-content"></div>
+				<a href="" data-toggle="modal" data-target="#showLogin"><img src="<?=base_url('assets/images/scuba.jpg')?>" class="img-responsive ideas-photo"></a>
+				<div class="post-content">SCUBA DIVING</div>
 				</div>
 				
 				<div class="col-md-offset-1 col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/influence.jpg')?>" class="img-responsive ideas-photo">
-				<div class="post-content">BOHOL ESCAPADE</div>
+				<a href="" data-toggle="modal" data-target="#showLogin"><img src="<?=base_url('assets/images/influence.jpg')?>" class="img-responsive ideas-photo"></a>
+				<div class="post-content">INFLUECE OTHERS</div>
 				</div>
 					<div class=" col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/facebook.jpg')?>" class="img-responsive ideas-photo">
-				<div class="post-content">BOHOL ESCAPADE</div>
+				<a href="" data-toggle="modal" data-target="#showLogin"><img src="<?=base_url('assets/images/facebook.jpg')?>" class="img-responsive ideas-photo"></a>
+				<div class="post-content">FACEBOOK EMPLOYEE</div>
 				</div>
 					<div class=" col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/bday.jpg')?>" class="img-responsive ideas-photo">
-				<div class="post-content">BOHOL ESCAPADE</div>
+				<a href="" data-toggle="modal" data-target="#showLogin"><img src="<?=base_url('assets/images/bday.jpg')?>" class="img-responsive ideas-photo"></a>
+				<div class="post-content">BIRTHDAY WITH FAMILY</div>
 				</div>
 					<div class="col-md-offset-1 col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/google.jpg')?>" class="img-responsive ideas-photo">
-				<div class="post-content">BOHOL ESCAPADE</div>
+				<a href="" data-toggle="modal" data-target="#showLogin"><img src="<?=base_url('assets/images/google.jpg')?>" class="img-responsive ideas-photo"></a>	
+				<div class="post-content">BE PART OF GOOGLE</div>
 				</div>
 					<div class=" col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/sponsor.jpg')?>" class="img-responsive ideas-photo">
-				<div class="post-content">BOHOL ESCAPADE</div>
+				<a href="" data-toggle="modal" data-target="#showLogin"><img src="<?=base_url('assets/images/sponsor.jpg')?>" class="img-responsive ideas-photo"></a>
+				<div class="post-content">BE A PHILANTROPY</div>
 				</div>
 				<div class=" col-sm-12 col-md-3 ideas">
-				<img src="<?=base_url('assets/images/cong.jpg')?>" class="img-responsive ideas-photo">
-				<div class="post-content">BOHOL ESCAPADE</div>
+				<a href="" data-toggle="modal" data-target="#showLogin"><img src="<?=base_url('assets/images/cong.jpg')?>" class="img-responsive ideas-photo"></a>
+				<div class="post-content">MEET CONG!</div>
 				</div>
 				
 			
@@ -82,15 +82,15 @@
 	<div class="bucket-login img-wrapper col-md-12 col-sm-12 rmv-padding  " id="achievements">
 	<div  class="col-md-12 rmv-padding featured"> 
 	<img src="<?=base_url('assets/images/photoslider1updated.png')?>" class="img-responsive col-md-12 rmv-padding login-photos">
-	<button class="readmore" data-toggle="modal" data-target="#showSignup">View Full story</button> 
+	<button class="readmore" data-toggle="modal" data-target="#showLogin">View Full story</button> 
 	</div>
 	<div  class="col-md-12 rmv-padding featured"> 
 	<img src="<?=base_url('assets/images/photoslider2updated.png')?>" class="img-responsive col-md-12 rmv-padding login-photos">
-	<button class="readmore2" data-toggle="modal" data-target="#showSignup">View Full story</button> 
+	<button class="readmore2" data-toggle="modal" data-target="#showLogin">View Full story</button> 
 	</div>
 	<div  class="col-md-12 rmv-padding featured"> 
 	<img src="<?=base_url('assets/images/photoslider3updated.png')?>" class="img-responsive col-md-12 rmv-padding login-photos">
-	<button class="readmore" data-toggle="modal" data-target="#showSignup">View Full story</button> 
+	<button class="readmore" data-toggle="modal" data-target="#showLogin">View Full story</button> 
 	</div>
 	</div>
 	

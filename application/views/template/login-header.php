@@ -104,24 +104,24 @@
                 
   
                 <div id="div-forms">
-                
-             
-                    <?=form_open('Login')?>
+					
+           `        <?=form_open('Login')?>
 		                <div class="modal-body">
 				    		
-				    		<p><input name="user" class="form-control" type="text" placeholder="username/Email" required></p>
-				    		<p><input name="pwrd" class="form-control" type="password" placeholder="Password" required></p>
+				    		<div id="user" class="col-md-12 rmv-padding signup-field">
+							<input type="text" id="myusername" placeholder="Username/email" class="form-control"  name="userlogin" value="<?php echo set_value('pass'); ?>" />
+							</div>
+				    		<div id="pass" class="col-md-12 rmv-padding signup-field">
+							<input type="password" id="mypass"  placeholder="password" class="form-control"  name="passlogin" value="<?php echo set_value('pass'); ?>" />
+							</div>
 							
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox"> Remember me
-                                </label>
-                            </div>
+                         
         		    	</div>
+						<div class="signup-field"><a href="" data-dismiss="modal" data-toggle="modal" data-target="#showSignup">New here? Signup!</a></div>
 				        <div class="modal-footer">
                             <div>
 							
-                                <button type="submit" class="btn btns btn-lg btn-block">Login</button>
+                                <button type="submit" id="login" class="btn btns btn-lg btn-block">Login</button>
 							
 
                             </div>
@@ -161,14 +161,21 @@
 							<div id="usr_verify" class="col-md-12 rmv-padding signup-field">
 						
 							<input type="text" id="user_name" placeholder="Username" class="form-control"  name="user_name" value="<?php echo set_value('user_name'); ?>" />
+					
 							</div>
-							
+							<div id="alias" class="col-md-12 rmv-padding signup-field">
+						
+							<input type="text" id="alias" placeholder="Display name" class="form-control"  name="alias" value="<?php echo set_value('alias'); ?>" />
+					
+							</div>
+									
 							</p>		
 							<p>
 							<div id="usr_email" class="col-md-12 rmv-padding signup-field">
 							<input type="text" id="email" placeholder="Example@yahoo.com" class="form-control"  name="email" value="<?php echo set_value('email'); ?>" />
+								
 							</div>
-							
+				
 							</p>		
 							<p>
 							<div id="usr_password" class="col-md-12 rmv-padding signup-field">
@@ -260,7 +267,7 @@ $(document).ready(function(){
   {
   $.ajax({
    type: "POST",
-   url: "<?php echo base_url();?>Login/check_user",
+   url: "<?php echo base_url();?>Login/check_email",
    data: "email="+$("#email").val(),
    success: function(msg){
     if(msg=="true")
@@ -377,6 +384,142 @@ $(document).ready(function(){
 });
 
 
+// login
 
 
+</script>
+<script>
+
+$(document).ready(function(){
+		$('#login').prop('disabled', 'disabled');
+        var username=false;
+        var password=false;
+ $("#myusername").keyup(function(){
+  if($("#myusername").val().length >=5)
+    {
+
+  $.ajax({
+   type: "POST",
+   url: "<?php echo base_url();?>Login/user_login",
+   data: "name="+$("#myusername").val(),
+   success: function(msg){
+    if(msg=="true")
+    {	
+
+
+		$("#user").removeClass('has-error');
+		$("#user").addClass('has-success');
+		$("#user").append(' <span id="okay1" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+
+		$('span[id^="notok1"]').remove();
+		
+		username = true;
+		changeStatus();
+	
+    }
+    else if(msg=="false")
+    {
+
+		$("#user").addClass('has-error');
+		$("#user").append('<span id="notok1" class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
+				 username=false;
+				 changeStatus();
+		$('span[id^="okay1"]').remove();
+    }
+   }
+  });
+  }
+  else 
+  {
+   	
+		$("#user").removeClass('has-error');
+		$("#user").removeClass('has-success');
+		
+		$('span[id^="notok1"]').remove();		
+		$('span[id^="okay1"]').remove();
+		 username=false;
+				 changeStatus();
+			
+  }
+ 
+
+
+
+ 	function changeStatus(){
+    if(!username||!password){
+		$('#login').prop('disabled', 'disabled');
+      		
+    } else{
+			$('#login').prop('disabled', false);
+    }
+}
+
+ });
+ 
+ 
+ 
+ 	
+        var username=false;
+        var password=false;
+ $("#mypass").keyup(function(){
+  if($("#mypass").val().length >=5)
+    {
+
+  $.ajax({
+   type: "POST",
+   url: "<?php echo base_url();?>Login/user_pass",
+   data: "pwd="+$("#mypass").val(),
+   success: function(msg){
+    if(msg=="true")
+    {	
+
+
+		$("#pass").removeClass('has-error');
+		$("#pass").addClass('has-success');
+		$("#pass").append(' <span id="okay2" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+
+		$('span[id^="notok2"]').remove();
+		
+		password = true;
+		changeStatus();
+	
+    }
+    else if(msg=="false")
+    {
+
+		$("#pass").addClass('has-error');
+		$("#pass").append('<span id="notok2" class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
+				 password=false;
+				 changeStatus();
+		$('span[id^="okay2"]').remove();
+    }
+   }
+  });
+  }
+  else 
+  {
+   	
+		$("#pass").removeClass('has-error');
+		$("#pass").removeClass('has-success');
+		
+		$('span[id^="notok2"]').remove();		
+		$('span[id^="okay2"]').remove();
+				 password=false;
+				 changeStatus();
+			
+  }
+    	function changeStatus(){
+    if(!username||!password){
+		$('#login').prop('disabled', 'disabled');
+      		
+    } else{
+			$('#login').prop('disabled', false);
+    }
+}
+
+ 
+
+ });
+
+ });
 </script>
