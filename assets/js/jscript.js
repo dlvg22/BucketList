@@ -36,10 +36,10 @@ $(function(){
 			  
    
 
-(function($) {          
+$(function($) {          
     $(document).ready(function(){         
 		 $('#hiddentitle').hide();
-        $( document.body).scroll(function(){                          
+        $( window ).scroll(function(){                          
             if ($(this).scrollTop() > 200) {
                 $('#hiddentitle').fadeIn(200);
             } else {
@@ -47,7 +47,7 @@ $(function(){
             }
         });
     });
-})(jQuery);
+})(jquery);
 
 
 

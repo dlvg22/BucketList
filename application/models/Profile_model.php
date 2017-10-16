@@ -20,9 +20,9 @@ class Profile_model extends CI_Model{
 	public function getUser($username){
 
 			$sql = "
-            SELECT * FROM user
+            SELECT * FROM users
             WHERE username LIKE '%$username%'
-            
+ 
         ";
 
         $query = $this->db->query($sql);
@@ -33,7 +33,7 @@ class Profile_model extends CI_Model{
 	public function updateSettings($username, $field, $newnickname){
 		$sql = "
 		
-		UPDATE user SET $field='$newnickname' 
+		UPDATE users SET $field='$newnickname' 
 		WHERE username LIKE '%$username%'
         
         ";
@@ -54,6 +54,10 @@ class Profile_model extends CI_Model{
 		$query = $this->db->get($this->table);
 		
 		return $query->result_array();
+	}
+	public function nickname($data){
+		
+		$this->db->insert($this->table,$data);
 	}
 
 }

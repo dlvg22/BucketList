@@ -2,8 +2,13 @@
 <div class="row sidebarprofile">
 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 default-space bigheader">
 			<div class="photo-template ">
-			<div ><a href=""><img src="<?php echo base_url('assets/images/franky.jpg'); ?>" class="user-image side-profilepict" /></a></div>
+			<div id="">
+			<?php echo form_open_multipart('upload/do_upload');?>
 			
+			<img src="<?php echo base_url('assets/images/franky.jpg'); ?>" id="usr-img" class="user-image side-profilepict" />
+			<div id="upload" class="text-center"><span class="glyphicon glyphicon-camera"></span>Upload photo</div>
+			</div>
+			</form>
 			<?php
 			$name="Frank Ho";
 			$user="@papaFrank";
@@ -12,8 +17,8 @@
 			$birthday="April 22,1998";
 			$work="Programmer/developer";
 			
-			echo '<p class="user-name">'.$name.'</p>';
-			echo '<p class="user-acc">'.$user.'</p>';
+			echo '<p class="user-name">'.$alias.'</p>';
+			echo '<p class="user-acc">'.'@'.$username.'</p>';
 			// echo '<p>Facebook URL : "."<a href="'.$user_profile['link'].'" target='_blank'"."> https://www.facebook.com/".$user_profile['id']."</a></p>';
 
 			?>
@@ -37,7 +42,13 @@
 	</div>    
 
 		
+		<script>
 		
+		$(".photo-template").hover(function(){
+			$("#upload").css('visibility', 'visible');
+			
+		});
+		</script>
 
 	
 

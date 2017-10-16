@@ -415,13 +415,13 @@ color:white;
 }
 
 .bucket-login{
-	height:1200px;
+	height:1100px;
 	width:100%;
 	background-color:white;
 	
 }
 .login-photos{
-	height:500px;
+	height:42px;
 }
 
 #hiddentitle{
@@ -434,7 +434,7 @@ color:white;
 	border-bottom:2px solid dodgerblue !important;
 	line-height: 40px !important;
 	box-shadow: 0 12px 6px -6px rgba(0,0,0, .2) !important;
-	z-index:9999!important;
+	z-index:10!important;
 
 
 
@@ -452,7 +452,7 @@ color:white;
 .readmore{ 
 position: absolute; 
 right: 350px;
-top:330px;
+top:300px;
 background-color: rgba(255,255,255, 0.1);
 border:2px solid black;
 height:50px;
@@ -462,7 +462,7 @@ width:200px;
  .readmore:hover{ 
 position: absolute; 
 right: 350px;
-top:330px;
+top:300px;
 background-color: rgba(255,255,255, 0.5);
 border:2px solid black;
 height:50px;
@@ -474,7 +474,7 @@ font-family:Arial;
  .readmore2{ 
 position: absolute; 
 left: 350px;
-top:330px;
+top:300px;
 background-color: rgba(255,255,255, 0.1);
 border:2px solid black;
 height:50px;
@@ -484,7 +484,7 @@ width:200px;
  .readmore2:hover{ 
 position: absolute; 
 right: 350px;
-top:330px;
+top:300px;
 background-color: rgba(255,255,255, 0.5);
 border:2px solid black;
 height:50px;
@@ -494,7 +494,7 @@ color:black;
 font-family:Arial;
  }
 .featured{
-	height:400px;
+	height:366px;
 	
 }
 .signup{
@@ -514,7 +514,7 @@ font-family:Arial;
 	background-repeat:none;
 }
 .signup-field{
-	margin:10px;
+	margin:15px;
 	padding-bottom:10px!important;
 	
 	

@@ -16,7 +16,7 @@
 	<script src="<?php echo base_url('bootstrap/js/bootstrap.min.js');?>"> </script>
    <link rel="stylesheet" href="<?php echo base_url("assets/css/settings.css"); ?>">
    <link rel="stylesheet" href="<?php echo base_url("assets/css/headerfooter.css"); ?>">
-  <script src="<?php echo base_url('assets/js/jquery-3.2.1.min (1).js');?>"></script>
+
   
 
 

@@ -7,53 +7,30 @@ class Bucket extends CI_Controller {
 		public function __construct()
 	{
 		parent:: __construct();
-
-	
-		
-
-
+		$this->load->model('login_model','login');
 	}
 	public function index()
 	{		
 			
-			
-			if( $_SERVER['REQUEST_METHOD']=='POST'){
-			
-			
-			$validate = array (
-				array('field'=>'user','label'=>'User','rules'=>'trim|required'),
-				array('field'=>'email','label'=>'Email','rules'=>'trim|required'),
-				array('field'=>'password','label'=>'Password','rules'=>'trim|required'),
-							);
-			$this->form_validation->set_rules($validate);
-			
-			if ($this->form_validation->run()===FALSE){
-				$data['errors'] = validation_errors();
-			}
-			else{ 
-				$record = array(
-								'user'=>$_POST['user'],
-								'email'=>$_POST['email'],
-								'password'=>$_POST['password']
-								
-							);
-							
-				$insert_user = $this->login->create($record);
-				
-				$data['saved'] = TRUE;
-				
-			}
-			
-		}
-		else{ 
-				
-		}
+				if(isset($_SESSION['username'])||isset($_SESSION['Email']) && isset($_SESSION['passwword'])){
+		$data['title']="Home";
 		
-			$data['title']="LOGIN";
-			$this->load->view('template/header',$data);
-			$this->load->view('template/navigation');
-			$this->load->view('bucket/login');
-			$this->load->view('template/footer');
+		$details=$this->login->read($_SESSION['userID']);
+		$name['username']=$details[0]['username'];
+		$name['alias']=$details[0]['nickname'];
+		
+		$this->load->view('template/header',$data);
+		$this->load->view('template/navigation',$name);
+		$this->load->view('template/sidebar-home',$name);
+		$this->load->view('bucket/bucketwall');
+		$this->load->view('template/right-panel');
+		$this->load->view('template/footer');
+		}
+	else{
+		redirect('Login','refresh');
+		
+		
+	}
 			
 	}
 	
@@ -68,40 +45,28 @@ class Bucket extends CI_Controller {
 		$this->load->view('bucket/profile-view');
 		
 	}
-	
-	
-	public function home()
-	{	
-		if(isset($_SESSION['username'])||isset($_SESSION['Email']) && isset($_SESSION['passwword'])){
-		$data['title']="Home";
-	
-		$this->load->view('template/header',$data);
-		$this->load->view('template/navigation',$data);
-		$this->load->view('template/sidebar-home');
-		$this->load->view('bucket/bucketwall');
-		$this->load->view('template/right-panel');
-		$this->load->view('template/footer');
-		}
-	else{
-		redirect('Login','refresh');
-		
-		
-	}
-	
-	}
+
 		public function settings()
 	{
 		$user =$this->input->get('username');
 	    $this->load->model('Profile_model','profile');
 			 	
 	 	$userinfo = $this->profile->getUser($user);
-
+			
+		$details=$this->login->read($_SESSION['userID']);
+		// Array ( [0] => Array ( [userID] => 1 [username] => dlvg22 [Email] => dlvg22@yahoo.com [password] => bucketlist ) )
+		$name['username']=$details[0]['username'];
+		$name['alias']=$details[0]['nickname'];
+		$name['userID']=$details[0]['userID'];
+		$name['email']=$details[0]['Email'];
+		$name['password']=$details[0]['password'];
 		$data['title']="Settings";
 		if(isset($userinfo))
 		{
+		
 		$this->load->view('template/header',$data);
-		$this->load->view('template/navigation');
-		$this->load->view('bucket/settings',['userinfo'=>$userinfo]);
+		$this->load->view('template/navigation',$name);
+		$this->load->view('bucket/settings',$name);
 		$this->load->view('template/footer');
 		}
 		else
