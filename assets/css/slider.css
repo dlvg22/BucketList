@@ -140,5 +140,7 @@ img {
   margin-bottom: -4px;
 }
 
-
-	
+.close{
+	height:20%;
+	float:bottom;
+}
