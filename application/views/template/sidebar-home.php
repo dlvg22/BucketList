@@ -36,44 +36,81 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 </script>
+<!-- home photo -->
 <?php
 			$name="Frank Ho";
 			$user="@papaFrank";
-			$about="!the algo you've usually see;";
+			$about="The algo you've usually see;";
 			$location="Tondo,Manila Philippines";
 			$birthday="April 22,1998";
 			$work="Programmer/developer";
 		
 
 			?>
-<!-- home photo -->
 <div class="row sidebarprofile">
 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 default-space bigheader">
 			<div class="photo-template ">
-			<div ><img style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" src="<?php echo base_url('assets/images/franky.jpg'); ?>" class="user-image side-profilepict" /></div>
+			<div ><img onclick="openModal();currentSlide(1)"  src="<?php echo base_url('assets/images/franky.jpg'); ?>" class="user-image side-profilepict hover-shadow cursor" /></div>
 			
 			<div id="myModal" class="modal">
-			<span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-
+	
+  <div class="modal-content slide">
+	<span class="close cursor" data-dismiss="modal" aria-label="Close" aria-hidden="true" onclick="closeModal()">&times;</span>
     <div class="mySlides">
-      <div class="numbertext"></div>
+     
       <img src="<?php echo base_url('assets/images/franky.jpg'); ?>" style="width:100%" class="img-size">
     </div>
 
     <div class="mySlides">
-      <div class="numbertext"></div>
+      
       <img src="<?php echo base_url('assets/images/luffy1.jpg'); ?>" style="width:100%" class="img-size">
     </div>
 
     <div class="mySlides">
-      <div class="numbertext"></div>
+      
       <img src="<?php echo base_url('assets/images/luffy2.jpg'); ?>" style="width:100%" class="img-size">
     </div>
     
     <div class="mySlides">
-      <div class="numbertext"></div>
+      
       <img src="<?php echo base_url('assets/images/luffy3.jpg'); ?>" style="width:100%" class="img-size">
+    </div>
+	
+	 <div class="mySlides">
+      
+      <img src="<?php echo base_url('assets/images/big1.jpg'); ?>" style="width:100%" class="img-size">
+    </div>
+	
+	<div class="mySlides">
+      
+      <img src="<?php echo base_url('assets/images/big1.jpg'); ?>" style="width:100%" class="img-size">
+    </div>
+	
+	<div class="mySlides">
+      
+      <img src="<?php echo base_url('assets/images/big1.jpg'); ?>" style="width:100%" class="img-size">
+    </div>
+	
+	<div class="mySlides">
+      
+      <img src="<?php echo base_url('assets/images/big1.jpg'); ?>" style="width:100%" class="img-size">
+    </div>
+	
+	<div class="mySlides">
+      
+      <img src="<?php echo base_url('assets/images/big1.jpg'); ?>" style="width:100%" class="img-size">
+    </div>
+	
+	
+	<div class="mySlides">
+      
+      <img src="<?php echo base_url('assets/images/big1.jpg'); ?>" style="width:100%" class="img-size">
+    </div>
+	
+	
+	<div class="mySlides">
+      
+      <img src="<?php echo base_url('assets/images/big1.jpg'); ?>" style="width:100%" class="img-size">
     </div>
     
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -83,19 +120,43 @@ function showSlides(n) {
       <p id="caption"></p>
     </div>
 
+<div class="botpic">
+    <div class="column">
+      <img class="demo cursor" src="<?php echo base_url('assets/images/franky.jpg'); ?>" onclick="currentSlide(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="<?php echo base_url('assets/images/luffy1.jpg'); ?>" onclick="currentSlide(2)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="<?php echo base_url('assets/images/luffy2.jpg'); ?>" onclick="currentSlide(3)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="<?php echo base_url('assets/images/luffy3.jpg'); ?>" onclick="currentSlide(4)">
+    </div>
+	 <div class="column">
+      <img class="demo cursor" src="<?php echo base_url('assets/images/big1.jpg'); ?>" onclick="currentSlide(5)">
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="<?php echo base_url('assets/images/big1.jpg'); ?>" onclick="currentSlide(6)">
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="<?php echo base_url('assets/images/big1.jpg'); ?>" onclick="currentSlide(7)">
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="<?php echo base_url('assets/images/big1.jpg'); ?>" onclick="currentSlide(8)">
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="<?php echo base_url('assets/images/big1.jpg'); ?>" onclick="currentSlide(9)">
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="<?php echo base_url('assets/images/big1.jpg'); ?>" onclick="currentSlide(10)">
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="<?php echo base_url('assets/images/big1.jpg'); ?>" onclick="currentSlide(11)">
+    </div>
+	   
+  </div>
 
-    <div class="column">
-      <img class="demo cursor" src="<?php echo base_url('assets/images/franky.jpg'); ?>" style="width:100%" onclick="currentSlide(1)" alt="<?php echo $name; ?>">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="<?php echo base_url('assets/images/luffy1.jpg'); ?>" style="width:100%" onclick="currentSlide(2)" alt="<?php echo $name; ?>">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="<?php echo base_url('assets/images/luffy2.jpg'); ?>" style="width:100%" onclick="currentSlide(3)" alt="<?php echo $name; ?>">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="<?php echo base_url('assets/images/luffy3.jpg'); ?>" style="width:100%" onclick="currentSlide(4)" alt="<?php echo $name; ?>">
-    </div>
   </div>
 </div>
 			
