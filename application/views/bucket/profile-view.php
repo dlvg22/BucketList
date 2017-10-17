@@ -18,88 +18,33 @@
     <li><a href="#">BucketMate</a></li>
 	</ul>
 <div class="tab-content">
-					<p><span class="glyphicon glyphicon-pencil righter"></span></p>
+		
 					
 					<div class="tab-pane fade in active">
 						<form class="form-horizontal" method="post" action="">
     					<div class="form-group">
-						<div class="info">
-      					 	<label for="inputNickname" class="control-label info col-xs-3">Firstname</label>
-     					   	<div class="col-xs-6">
-            				<input type="text" class="form-control" value="nickname"  id="inputEmail" placeholder="New Nickname" name="newdata">
-        					</div>
-    					  	<div class="col-xs-offset-3 col-xs-6s ">
-            				<button type="submit" class="btn btn-primary">
-            				<span class="glyphicon glyphicon-edit"></span> Change
-            				</button>
-        					<button class="btn btn-default closer">Cancel</button>
-        					</div>
-        					</div>
-							<div class="info">
-							<label for="inputNickname" class="control-label info  col-xs-3">Middle</label>
-     					   	<div class="col-xs-6">
-            				<input type="text" class="form-control" value="nickname"  id="inputEmail" placeholder="New Nickname" name="newdata">
-        					</div>
-    					  	<div class="col-xs-offset-3 col-xs-6s ">
-            				<button type="submit" class="btn btn-primary">
-            				<span class="glyphicon glyphicon-edit"></span> Change
-            				</button>
-        					<button class="btn btn-default closer">Cancel</button>
-        					</div>
-        					</div>
-							<div class="info">
-							<label for="inputNickname" class="control-label info  col-xs-3">Lastname</label>
-     					   	<div class="col-xs-6">
-            				<input type="text" class="form-control" value="nickname"  id="inputEmail" placeholder="New Nickname" name="newdata">
-        					</div>
-    					  	<div class="col-xs-offset-3 col-xs-6s ">
-            				<button type="submit" class="btn btn-primary">
-            				<span class="glyphicon glyphicon-edit"></span> Change
-            				</button>
-        					<button class="btn btn-default closer">Cancel</button>
-        					</div>
-        					</div>
-							<div class="info">
-							<label for="inputNickname" class="control-label col-xs-3">address</label>
-     					   	<div class="col-xs-6">
-            				<input type="text" class="form-control" value="nickname"  id="inputEmail" placeholder="New Nickname" name="newdata">
-        					</div>
-    					  	<div class="col-xs-offset-3 col-xs-6s ">
-            				<button type="submit" class="btn btn-primary">
-            				<span class="glyphicon glyphicon-edit"></span> Change
-            				</button>
-        					<button class="btn btn-default closer">Cancel</button>
-        					</div>
-        					</div>
-							<div class="info">
-							<label for="inputNickname" class="control-label col-xs-3">Cellphone #;</label>
-     					   	<div class="col-xs-6">
-            				<input type="text" class="form-control" value="nickname"  id="inputEmail" placeholder="New Nickname" name="newdata">
-        					</div>
-    					  	<div class="col-xs-offset-3 col-xs-6s ">
-            				<button type="submit" class="btn btn-primary">
-            				<span class="glyphicon glyphicon-edit"></span> Change
-            				</button>
-        					<button class="btn btn-default closer">Cancel</button>
-        					</div>
-        					</div>
-							
 						
-							<div class="info">
-							<label for="inputNickname" class="control-label col-xs-3">Birthday</label>
-     					   	<div class="col-xs-6">
-            				<input type="text" class="form-control" value="nickname"  id="inputEmail" placeholder="New Nickname" name="newdata">
-        					</div>
-    					  	<div class="col-xs-offset-3 col-xs-6s ">
-            				<button type="submit" class="btn btn-primary">
-            				<span class="glyphicon glyphicon-edit"></span> Change
-            				</button>
-        					<button class="btn btn-default closer">Cancel</button>
-        					</div>
-        					</div>
+						<div class="info profile-space">
+						<div class="col-md-12  edit" id="">
+								<label for="">Firstname:</label>
+								<span "myinfo"></span>
+							    <span class="edit-btn">Edit:</span>
+						</div> 
+						<div class="col-md-1 edit-btn" id="">
+					
+						</div> 
+      					 	<div class="form" id="fname"> 
+								<div class="col-md-2 col-md-offset-1 ">
+								<label for="">Firstname:</label>
+								</div>
+								<div class="col-md-5">
+									
+									<input name="firstname" type="text" class="form-control" id="firstname" placeholder="First name" value="<?php echo set_value('firstname');?>">
+								</div>
+							</div>
 							
-    					</div>
-					</form>
+							
+						</form>
 					</div>
 					</div>
 
@@ -128,5 +73,14 @@
 		<script>
 			$('#choosecover').change(function(){  
 			$('#coverupload').submit();
+			});
+		</script>
+		
+		
+		
+		<script>
+		$('#fname').hide();
+			$('#edit-btn').click(function(){  
+			$('#fname').show();
 			});
 		</script>
