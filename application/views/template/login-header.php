@@ -1,6 +1,5 @@
 <!-- LOGIN HEADER-->
 
-
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-12 rmv-padding" id="hiddentitle">
@@ -101,34 +100,42 @@
                 
   
                 <div id="div-forms">
-                
-             
-                    <?=form_open('Login')?>
+					
+           `        <?=form_open('Login')?>
 		                <div class="modal-body">
 				    		
-				    		<p><input name="user" class="form-control" type="text" placeholder="username/Email" required></p>
-				    		<p><input name="pwrd" class="form-control" type="password" placeholder="Password" required></p>
+				    		<div id="user" class="col-md-12 rmv-padding signup-field">
+							<input type="text" id="myusername" placeholder="Username/email" class="form-control"  name="userlogin" value="<?php echo set_value('pass'); ?>" />
+							</div>
+				    		<div id="pass" class="col-md-12 rmv-padding signup-field">
+							<input type="password" id="mypass"  placeholder="password" class="form-control"  name="passlogin" value="<?php echo set_value('pass'); ?>" />
+							</div>
 							
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox"> Remember me
-                                </label>
-                            </div>
+                         
         		    	</div>
+						<div class="signup-field"><a href="" data-dismiss="modal" data-toggle="modal" data-target="#showSignup">New here? Signup!</a></div>
 				        <div class="modal-footer">
                             <div>
 							
-                                <button type="submit" class="btn btns btn-lg btn-block">Login</button>
+                                <button type="submit" id="login" class="btn btns btn-lg btn-block">Login</button>
 							
 
                             </div>
-				    	    
+					</form>
 				        </div>
+
                     </form>
                  <?=form_open('Facebook/login')?>
 				
                 <button class="fblog" style="width:100%" type="submit" value="<?php  echo base_url('Facebook/callback');?>" name="valueurl" ><img style="width:100%" src="<?php echo base_url('assets/images/loginfb.png');?>"></button>
 				</form>
+
+                    <!---
+                 form_open('Facebook/login')
+				 <input type="hidden" name="url"></input>
+                <button type="submit" value="base_url('Facebook/callback');?>" ><img src="<o base_url('assets/images/loginfb.png');?>"></button>
+				</form>-->
+
                 </div>
                 
                 
@@ -158,30 +165,37 @@
 							<div id="usr_verify" class="col-md-12 rmv-padding signup-field">
 						
 							<input type="text" id="user_name" placeholder="Username" class="form-control"  name="user_name" value="<?php echo set_value('user_name'); ?>" />
+					
 							</div>
-							
+							<div id="alias" class="col-md-12 rmv-padding signup-field">
+						
+							<input type="text" id="alias" placeholder="Display name" class="form-control"  name="alias" value="<?php echo set_value('alias'); ?>" />
+					
+							</div>
+									
 							</p>		
 							<p>
 							<div id="usr_email" class="col-md-12 rmv-padding signup-field">
 							<input type="text" id="email" placeholder="Example@yahoo.com" class="form-control"  name="email" value="<?php echo set_value('email'); ?>" />
+								
 							</div>
-							
+				
 							</p>		
 							<p>
 							<div id="usr_password" class="col-md-12 rmv-padding signup-field">
-							<p><input name="pwrd" id="pwrd" class="form-control" type="password" placeholder="Password" required></p>
+							<p><input method="post" name="pwrd" id="pwrd" class="form-control" type="password" placeholder="Password minimum of 6 characters" required></p>
 							</div>
 							</p>	
 							<p>
 							<div id="usr_password2" class="col-md-12 rmv-padding signup-field">
-				    		<p><input name="confirm-pwrd" id="conpwrd" class="form-control" type="password" placeholder="Re-enter Password" required></p>
+				    		<p><input method="post" name="confirm-pwrd" id="conpwrd" class="form-control" type="password" placeholder="Re-enter Password" required></p>
 							</div>
 							</p>								
                            
         		    	</div>
 				        <div class="modal-footer">
                             <div>
-                                <button type="submit" id="reg" class="btn btn-primary btn-lg btn-block">SIGN UP</button>
+                                <button type="submit" id="reg" class="btn btns btn-lg btn-block">SIGN UP</button>
                             </div>
 				    	    
 				        </div>
@@ -197,12 +211,12 @@
 	
 <script type="text/javascript">
 
-        var uname = false;
-        var uemail = false;
-        var uword = false;
-        var uword2 = false;
 $(document).ready(function(){
-	
+		$('#reg').prop('disabled', 'disabled');
+        var uname=false;
+        var uemail=false;
+        var uword=false;
+        var uword2=false;
  $("#user_name").keyup(function(){
   if($("#user_name").val().length >=5)
   {
@@ -213,20 +227,23 @@ $(document).ready(function(){
    success: function(msg){
     if(msg=="true")
     {	
-	
-			
+
 		$("#usr_verify").removeClass('has-error');
 		$("#usr_verify").addClass('has-success');
 		$("#usr_verify").append(' <span id="okay" class="glyphicon glyphicon-ok form-control-feedback"></span>');
 
 		$('span[id^="notok"]').remove();
+		
+		uname = true;
+		changeStatus();
 	
     }
     else if(msg=="false")
     {
 		$("#usr_verify").addClass('has-error');
 		$("#usr_verify").append('<span id="notok" class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
-			uname=false;
+				 uname=false;
+				 changeStatus();
 		$('span[id^="okay"]').remove();
     }
    }
@@ -240,28 +257,31 @@ $(document).ready(function(){
 		
 		$('span[id^="notok"]').remove();		
 		$('span[id^="okay"]').remove();
-				uname=false;
+		 uname=false;
+				 changeStatus();
+			
   }
  });
+
+ 
+ 
  
   $("#email").keyup(function(){
   if($("#email").val().length >=5)
   {
   $.ajax({
    type: "POST",
-   url: "<?php echo base_url();?>Login/check_user",
-   data: "name="+$("#email").val(),
+   url: "<?php echo base_url();?>Login/check_email",
+   data: "email="+$("#email").val(),
    success: function(msg){
     if(msg=="true")
     {	
-
-				
-			
 		$("#usr_email").removeClass('has-error');
 		$("#usr_email").addClass('has-success');
-		$("#usr_email").append(' <span id="okay2" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+		$("#usr_email").append(' <span id="useremail" class="glyphicon glyphicon-ok form-control-feedback"></span>');
 
 		uemail=true;
+		changeStatus();
 		$('span[id^="myemail"]').remove();
 	
     }
@@ -269,9 +289,9 @@ $(document).ready(function(){
     {
 		$("#usr_email").addClass('has-error');
 		$("#usr_email").append('<span id="myemail" class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
-		
 			uemail=false;
-		$('span[id^="okay2"]').remove();
+			changeStatus();
+		$('span[id^="useremail"]').remove();
 		
     }
    }
@@ -284,7 +304,9 @@ $(document).ready(function(){
 		$("#usr_email").removeClass('has-success');
 			$('span[id^="myemailok"]').remove();
 				uemail=false;
+			    changeStatus();
 		$('span[id^="myemail"]').remove();
+		$('span[id^="useremail"]').remove();
   }
  });
  
@@ -298,6 +320,7 @@ $(document).ready(function(){
 					$("#usr_password").append(' <span id="okay5" class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
 					$('span[id^="okay6"]').remove();
 					uword=false;
+					changeStatus();
                 
           
         }
@@ -306,8 +329,10 @@ $(document).ready(function(){
              $("#usr_password").removeClass('has-error');
 					$("#usr_password").addClass('has-success');
 					$("#usr_password").append(' <span id="okay6" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+							
 							$('span[id^="okay5"]').remove();
 				uword=true;
+				changeStatus();
             }
     });
     
@@ -320,8 +345,10 @@ $(document).ready(function(){
 					$("#usr_password2").removeClass('has-success');
 					$("#usr_password2").addClass('has-error');
 					$("#usr_password2").append(' <span id="okay3" class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
+			
 					$('span[id^="okay4"]').remove();
                 uword2=false;
+				changeStatus();
                 
             }
 			
@@ -329,13 +356,174 @@ $(document).ready(function(){
                $("#usr_password2").removeClass('has-error');
 					$("#usr_password2").addClass('has-success');
 					$("#usr_password2").append(' <span id="okay4" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+					$("#usr_password2").append(' <span id="okay4"></span>');
 							$('span[id^="okay3"]').remove();
+							$('span[id^="weak"]').remove();
 		   uword2=true;
+		   changeStatus();
             }
         }
+		else{
+			
+			
+			 uword2=false;
+				changeStatus();
+		}
+	
     });
+	
+	function changeStatus(){
+    if(!uname||!uemail||!uword||!uword2){
+		$('#reg').prop('disabled', 'disabled');
+      		
+    } else{
+			$('#reg').prop('disabled', false);
+    }
+}
+
 		
-  
- 
+		
+
+		
 });
+
+
+// login
+
+
+</script>
+<script>
+
+$(document).ready(function(){
+		$('#login').prop('disabled', 'disabled');
+        var username=false;
+        var password=false;
+ $("#myusername").keyup(function(){
+  if($("#myusername").val().length >=5)
+    {
+
+  $.ajax({
+   type: "POST",
+   url: "<?php echo base_url();?>Login/user_login",
+   data: "name="+$("#myusername").val(),
+   success: function(msg){
+    if(msg=="true")
+    {	
+
+
+		$("#user").removeClass('has-error');
+		$("#user").addClass('has-success');
+		$("#user").append(' <span id="okay1" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+
+		$('span[id^="notok1"]').remove();
+		
+		username = true;
+		changeStatus();
+	
+    }
+    else if(msg=="false")
+    {
+
+		$("#user").addClass('has-error');
+		$("#user").append('<span id="notok1" class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
+				 username=false;
+				 changeStatus();
+		$('span[id^="okay1"]').remove();
+    }
+   }
+  });
+  }
+  else 
+  {
+   	
+		$("#user").removeClass('has-error');
+		$("#user").removeClass('has-success');
+		
+		$('span[id^="notok1"]').remove();		
+		$('span[id^="okay1"]').remove();
+		 username=false;
+				 changeStatus();
+			
+  }
+ 
+
+
+
+ 	function changeStatus(){
+    if(!username||!password){
+		$('#login').prop('disabled', 'disabled');
+      		
+    } else{
+			$('#login').prop('disabled', false);
+    }
+}
+
+ });
+ 
+ 
+ 
+ 	
+        var username=false;
+        var password=false;
+ $("#mypass").keyup(function(){
+  if($("#mypass").val().length >=5)
+    {
+
+  $.ajax({
+   type: "POST",
+   url: "<?php echo base_url();?>Login/user_pass",
+   data: "pwd="+$("#mypass").val(),
+   success: function(msg){
+    if(msg=="true")
+    {	
+
+
+		$("#pass").removeClass('has-error');
+		$("#pass").addClass('has-success');
+		$("#pass").append(' <span id="okay2" class="glyphicon glyphicon-ok form-control-feedback"></span>');
+
+		$('span[id^="notok2"]').remove();
+		
+		password = true;
+		changeStatus();
+	
+    }
+    else if(msg=="false")
+    {
+
+		$("#pass").addClass('has-error');
+		$("#pass").append('<span id="notok2" class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
+				 password=false;
+				 changeStatus();
+		$('span[id^="okay2"]').remove();
+    }
+   }
+  });
+  }
+  else 
+  {
+   	
+		$("#pass").removeClass('has-error');
+		$("#pass").removeClass('has-success');
+		
+		$('span[id^="notok2"]').remove();		
+		$('span[id^="okay2"]').remove();
+				 password=false;
+				 changeStatus();
+			
+  }
+    	function changeStatus(){
+    if(!username||!password){
+		$('#login').prop('disabled', 'disabled');
+      		
+    } else{
+			$('#login').prop('disabled', false);
+    }
+}
+
+ 
+
+ });
+
+ });
 </script>
