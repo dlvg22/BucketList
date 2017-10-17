@@ -1,8 +1,5 @@
 <!-- LOGIN HEADER-->
-<script>
 
-
-</script>
 
 <div class="container-fluid">
 <div class="row">
@@ -129,8 +126,8 @@
 				        </div>
                     </form>
                  <?=form_open('Facebook/login')?>
-				 <input type="hidden" name="url"></input>
-                <button type="submit" value="<?php  echo base_url('Facebook/callback');?>" ><img src="<?php echo base_url('assets/images/loginfb.png');?>"></button>
+				
+                <button class="fblog" style="width:100%" type="submit" value="<?php  echo base_url('Facebook/callback');?>" name="valueurl" ><img style="width:100%" src="<?php echo base_url('assets/images/loginfb.png');?>"></button>
 				</form>
                 </div>
                 

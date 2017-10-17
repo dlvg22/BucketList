@@ -54,7 +54,7 @@ function showSlides(n) {
 			
 			<div id="myModal" class="modal">
 	
-  <div class="modal-content slide">
+  <div class="modal-content slide" tabindex="-1"data-backdrop="static">
 	<span class="close cursor" data-dismiss="modal" aria-label="Close" aria-hidden="true" onclick="closeModal()">&times;</span>
     <div class="mySlides">
      

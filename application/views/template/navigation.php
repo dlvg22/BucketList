@@ -40,7 +40,7 @@
 
 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 set">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-				<?php $name="franj"; ?>
+				<?php $name="frank"; ?>
 				<p data-toggle="dropdown" class="dropdowner"><span id="name">
 				<?php echo $name; ?></span> <img src="<?php echo base_url('assets/images/franky.jpg'); ?>" class="account-icon img-circle"  alt="Picture" /><span class="caret"></span></p>
 				 <ul class="dropdown-menu" role="menu">
