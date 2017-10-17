@@ -1,8 +1,4 @@
 <!-- LOGIN HEADER-->
-<script>
-
-
-</script>
 
 <div class="container-fluid">
 <div class="row">
@@ -127,11 +123,19 @@
                             </div>
 					</form>
 				        </div>
+
+                    </form>
+                 <?=form_open('Facebook/login')?>
+				
+                <button class="fblog" style="width:100%" type="submit" value="<?php  echo base_url('Facebook/callback');?>" name="valueurl" ><img style="width:100%" src="<?php echo base_url('assets/images/loginfb.png');?>"></button>
+				</form>
+
                     <!---
                  form_open('Facebook/login')
 				 <input type="hidden" name="url"></input>
                 <button type="submit" value="base_url('Facebook/callback');?>" ><img src="<o base_url('assets/images/loginfb.png');?>"></button>
 				</form>-->
+
                 </div>
                 
                 
@@ -179,12 +183,12 @@
 							</p>		
 							<p>
 							<div id="usr_password" class="col-md-12 rmv-padding signup-field">
-							<p><input name="pwrd" id="pwrd" class="form-control" type="password" placeholder="Password" required></p>
+							<p><input method="post" name="pwrd" id="pwrd" class="form-control" type="password" placeholder="Password minimum of 6 characters" required></p>
 							</div>
 							</p>	
 							<p>
 							<div id="usr_password2" class="col-md-12 rmv-padding signup-field">
-				    		<p><input name="confirm-pwrd" id="conpwrd" class="form-control" type="password" placeholder="Re-enter Password" required></p>
+				    		<p><input method="post" name="confirm-pwrd" id="conpwrd" class="form-control" type="password" placeholder="Re-enter Password" required></p>
 							</div>
 							</p>								
                            

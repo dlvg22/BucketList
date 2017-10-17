@@ -50,10 +50,19 @@ function showSlides(n) {
 			$birthday="April 22,1998";
 			$work="Programmer/developer";
 
-			
-
-
 			?>
+
+			<div id="myModal" class="modal">
+	
+  <div class="modal-content slide" tabindex="-1"data-backdrop="static">
+	<span class="close cursor" data-dismiss="modal" aria-label="Close" aria-hidden="true" onclick="closeModal()">&times;</span>
+    <div class="mySlides">
+     
+      <img src="<?php echo base_url('assets/images/franky.jpg'); ?>" style="width:100%" class="img-size">
+    </div>
+
+
+			
 
 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 default-space bigheader">
 	<div class="photo-template ">

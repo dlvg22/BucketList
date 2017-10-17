@@ -17,10 +17,16 @@
 }
 
 .demo{
+<<<<<<< HEAD
+	height:100%;
+	width:100%;
+	opacity:1;
+=======
 	height:80px;
 	width:100px;
 	margin:2px;
 	
+>>>>>>> 28fd2b4f850f6c7a7f3f56894e191e7f9407cbbe
 }
 
 

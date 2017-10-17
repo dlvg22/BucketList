@@ -42,7 +42,9 @@
 
 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 set">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-			
+
+				<?php $name="frank"; ?>
+
 				<p data-toggle="dropdown" class="dropdowner"><span id="name">
 		
 				<?php echo $alias; ?></span> <img src="<?php if($dp!='default'){echo base_url('upload/'.$dp.'');}else{echo base_url('assets/images/'.$dp.'');}?>" class="account-icon img-circle"  alt="Picture" /><span class="caret"></span></p>

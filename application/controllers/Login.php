@@ -9,6 +9,7 @@ class Login extends CI_Controller {
 		
 		$this->load->model('login_model','login');
 		$this->load->model('Profile_model','prfile');
+		$this->load->library('encrypt');
 		
 	}
 
@@ -80,7 +81,12 @@ class Login extends CI_Controller {
 	}
 		public function user_pass(){
 		
-		$data=array('userpass'=>$this->input->post('pwd'));
+		
+		
+		$data=array('userpass'=>$this->input->post('pwd'),
+					'userpass'=>$this->encrypt->decode('pwd')
+					
+		);
 	
 		$rs=$this->login->check_pass($data);
 		
@@ -100,10 +106,17 @@ class Login extends CI_Controller {
 	
 	public function signup()
 	{
-				$data=array(
+				
+				
+				
+				$data =array(
 				'username'=>$this->input->post('user_name'),
 				'Email'=>$this->input->post('email'),
 				'password'=>$this->input->post('pwrd'),
+				'password'=>$this->encrypt->encode('pwrd'),
+				
+				
+				
 				);
 					$rs=$this->login->create($data);
 					$nickname=array(
@@ -114,13 +127,11 @@ class Login extends CI_Controller {
 					'username'=>$data['username'],
 					'password'=>$data['password'],
 					'userID'=>$rs
+					
 					);
+					
 					$this->session->set_userdata($user);	
-						redirect('Bucket');
-				
-     
-	
-			
+						redirect('Bucket');	
 	}
 	
 	

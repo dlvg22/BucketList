@@ -48,9 +48,16 @@ class Bucket extends CI_Controller {
 		}
 	else{
 		redirect('Login','refresh');
-		
+
+			$data['title']="LOGIN";
+			$this->load->view('template/header',$data);
+			$this->load->view('template/navigation');
+			$this->load->view('bucket/profile');
+			$this->load->view('template/footer');
+
 		
 	}
+
 			
 	}
 	
@@ -59,7 +66,7 @@ class Bucket extends CI_Controller {
 	public function profile()
 	{
 		$data['title']="Profile";
-				$details=$this->login->read($_SESSION['userID']);
+		$details=$this->login->read($_SESSION['userID']);
 		$photos=$this->upl->read($_SESSION['userID']);
 		$cover=$this->uplb->read($_SESSION['userID']);
 		if($cover!=null){

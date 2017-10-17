@@ -31,7 +31,6 @@ class Login_model extends CI_Model {
 	
 	
 	public function validate($data){
-
 			  $this->db->select('*');
 			  $this->db->from('users');
 			  $this->db->where('username',$data['username']);
@@ -39,6 +38,7 @@ class Login_model extends CI_Model {
 			  $this->db->or_where('Email',$data['username']);
 			  $this->db->where('password',$data['password']);
 			 $query=$this->db->get();
+			 
 			return $query;
 
 		  
@@ -60,7 +60,7 @@ class Login_model extends CI_Model {
 }
 	public function check_pass($usr)
 {
-
+		
 		 $this->db->where("password",$usr['userpass']);
 		 $query=$this->db->get($this->table);
 		 if($query->num_rows()>0)
