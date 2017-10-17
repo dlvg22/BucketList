@@ -28,7 +28,16 @@ class Bucket extends CI_Controller {
 		}
 		$name['username']=$details[0]['username'];
 		$name['alias']=$details[0]['nickname'];
-		
+		foreach($photos as $s){
+			$p=array(
+			'myphotos'=>$s['photoname']
+			
+			);
+			
+			$ph[]=$p;
+		}
+		$name['old']=$ph;
+
 		
 		$this->load->view('template/header',$data);
 		$this->load->view('template/navigation',$name);
@@ -66,6 +75,16 @@ class Bucket extends CI_Controller {
 		else{
 			$name['dp']='default';
 		}
+		foreach($photos as $s){
+			$p=array(
+			'myphotos'=>$s['photoname']
+			
+			);
+			
+			$ph[]=$p;
+		}
+		$name['old']=$ph;
+
 		$name['username']=$details[0]['username'];
 		$name['alias']=$details[0]['nickname'];
 		
@@ -98,6 +117,7 @@ class Bucket extends CI_Controller {
 		else{
 			$name['dp']='default';
 		}
+		
 		$details=$this->login->read($_SESSION['userID']);
 		// Array ( [0] => Array ( [userID] => 1 [username] => dlvg22 [Email] => dlvg22@yahoo.com [password] => bucketlist ) )
 		$name['username']=$details[0]['username'];

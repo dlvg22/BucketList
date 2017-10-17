@@ -1,7 +1,7 @@
 
 /* profile */
 .user-cover{
-	  width: 97%;
+	  width: 881px;
   height: 220px;
 	position: absolute;
 	
@@ -12,8 +12,8 @@
     top: 170px; 
 	height:50px;
 	padding:15px;
-	left: 78%;
-	width:200px;
+	left: 77%;
+	width:202px;
 	z-index:100;
 	color:black;
 	font-size:20px;
@@ -38,5 +38,41 @@
 		cursor:pointer;
 }
 .info{
-	margin-bottom:30px;
+	min-height:300px;
+	border-bottom:1px solid black;
+	border-top:1px solid black;
+	width:881px;
+	margin-left:13px;
+	
 }
+.profile-space{
+	margin-top:30px!important;
+}
+.edit{
+	padding:5px;
+	margin-left:14px;
+	border-bottom:1px solid #f5f5ef!important;
+
+	height:30px;
+}
+.edit:hover{
+	padding:5px;
+	margin-left:14px;
+	border-bottom:1px solid #f5f5ef!important;
+	background-color:#f5f5ef;
+	height:30px;
+}
+.edit-btn{
+	margin-left:80%!important;
+	color:red;
+	
+}
+.edit-btn:hover{
+	margin-left:80%!important;
+	color:blue;
+	text-decoration:underline;
+	cursor:pointer;
+	
+}
+
+

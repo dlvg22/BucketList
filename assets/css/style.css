@@ -2,7 +2,9 @@ body{
 	margin: 0;
 	padding:0;
 	padding-right: 0 !important;
-	overflow-y:visible!important;
+	overflow-y:auto!important;
+	overflow-x:hidden!important;
+	background-color:#f5f5ef!important;
 }
 
 .navigation-header{
