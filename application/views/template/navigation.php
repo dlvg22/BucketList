@@ -1,6 +1,9 @@
 <div class="row topsider">
 			<div class="col-xs-1 col-sm-2 col-md-2 col-lg-2 col-xl-2 marker"> 
-				<a href="<?=base_url('Bucket')?>"><div id="logo" class="img-responsive">	
+
+				<div id="logohere" class="img-responsive">	
+
+
 					<?xml version="1.0" encoding="utf-8"?>
 				
 					<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -23,7 +26,7 @@
 			
 			<div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 col-xl-2 navi">
 				<p>
-					<a href=""><span class="glyphicon glyphicon-home" title="Home"></span></a>
+					<a href="<?php echo base_url(); ?>bucket/"><span class="glyphicon glyphicon-home" title="Home"></span></a>
 					<a href=""><span class="glyphicon glyphicon-envelope" title="Messages"></span></a>
 					<a href=""><span class="glyphicon glyphicon-bell" title="Notifications"></span></a>
 				</p>		
@@ -39,7 +42,6 @@
 				</div>
    				</form>
 			</div>
-
 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 set">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 

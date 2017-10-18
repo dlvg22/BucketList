@@ -77,7 +77,7 @@ p.user-acc{
 .home-list{
 	
 	background-color:white;
-	height:267px;
+	min-height:290px;
 	
 	padding:5px
 	
@@ -226,7 +226,7 @@ p.user-acc{
 
 	width:98%;
 	height:40px;
-	 border: none;
+	 border: 1px solid black;
 		 outline: none;
 		 padding-left:10px;
 		 margin:5px;
@@ -248,7 +248,7 @@ p.user-acc{
 
 	width:98%;
 	height:40px;
-	 border: none;
+	 border: 1px solid black;
 		 outline: none;
 		 padding-left:10px;
 		 margin:5px;
@@ -279,16 +279,14 @@ p.user-acc{
 	resize: none;	
 	margin:5px;
 	 border: none;
-	
 	padding:10px;
 }
 .post-description:focus{
 	width:98%;
 	margin:5px;
 	resize: none;	
-	 border: none;
- 
-	   outline: none;
+	border: 1px solid black;
+	outline: none;
 }
 
 .post-photo{
@@ -424,6 +422,7 @@ p.user-acc{
 	margin-bottom:5px;
 	
 }
+
 #usr-img{
 	position: absolute;
     z-index: 5;

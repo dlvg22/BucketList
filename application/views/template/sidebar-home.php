@@ -38,9 +38,15 @@ function showSlides(n) {
 </script>
 <!-- home photo -->
 
-
-	
-					
+<div class="row sidebarprofile">
+<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 default-space bigheader">
+			<div class="photo-template ">
+			<div id="">
+			<?php echo form_open_multipart('upload/do_upload');?>
+			<img src="<?php echo base_url('assets/images/franky.jpg'); ?>" id="usr-img" class="user-image side-profilepict" />
+			<div id="upload" class="text-center"><span class="glyphicon glyphicon-camera"></span>Upload photo</div>
+			</div>
+			</form>
 
 			<?php
 

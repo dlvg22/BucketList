@@ -8,8 +8,8 @@ class Profile_model extends CI_Model{
 
 			$sql = "
             SELECT * FROM profile
-            WHERE CONCAT(`nickname`, `username`) LIKE '%$search%'
-            ORDER BY nickname ASC
+            WHERE CONCAT(`nickname`, `firstname`, `middlename`, `lastname`) LIKE '%$search%'
+            ORDER BY firstname ASC
         ";
 
         $query = $this->db->query($sql);
@@ -22,7 +22,7 @@ class Profile_model extends CI_Model{
 			$sql = "
             SELECT * FROM users
             WHERE username LIKE '%$username%'
- 
+            
         ";
 
         $query = $this->db->query($sql);
@@ -54,10 +54,6 @@ class Profile_model extends CI_Model{
 		$query = $this->db->get($this->table);
 		
 		return $query->result_array();
-	}
-	public function nickname($data){
-		
-		$this->db->insert($this->table,$data);
 	}
 
 }

@@ -4,35 +4,11 @@
           <div class="col-md-offset-2 col-md-8 contents">
 					<h2>Account Settings</h2></br>
 					<?php 
-                $oldnickname=$userinfo->nickname;
                 $oldusername=$userinfo->username;
                 $oldemail=$userinfo->email;
                 $oldpassword=$userinfo->password;
           ?>
           <table class="table-responsive table">
-          <tr><td>
-					<div class="item">
-					<p><b>Nickname: </b>&nbsp;<?php echo $userinfo->nickname; ?><span class="glyphicon glyphicon-pencil righter"></span></p>
-					
-					<div class="menu-settings">
-						<form class="form-horizontal" method="post" action="<?php echo base_url(); ?>bucket/update/<?php echo $oldusername; ?>/<?php echo 'nickname'; ?>">
-    					<div class="form-group">
-      					 	<label for="inputNickname" class="control-label col-xs-3">New Nickname</label>
-     					   	<div class="col-xs-6">
-            				<input type="text" class="form-control" value="nickname"  id="inputEmail" placeholder="New Nickname" name="newdata">
-        					</div>
-    					  	<div class="col-xs-offset-3 col-xs-6s ">
-            				<button type="submit" class="btn btn-primary">
-            				<span class="glyphicon glyphicon-edit"></span> Change
-            				</button>
-        					<button class="btn btn-default closer">Cancel</button>
-        					</div>
-    					</div>
-					</form>
-					</div>
-					</div></td>
-		      </tr>
-
           <tr><td>
     			<div class="item">
 					<p><b>Username: </b>&nbsp;<?php echo $oldusername; ?><span class="glyphicon glyphicon-pencil righter"></span></p>		
@@ -41,7 +17,7 @@
     					<div class="form-group">
       					 	<label for="inputUsername" class="control-label col-xs-3">New Username</label>
      					   	<div class="col-xs-6">
-            				<input type="username" class="form-control" id="inputEmail" placeholder="New Username" name="newuser">
+            				<input type="username" class="form-control" id="inputEmail" placeholder="<?php echo $oldusername; ?>" name="newuser">
         					</div>
     					   	<div class="col-xs-offset-3 col-xs-6s ">
             				<button type="submit" class="btn btn-primary">
@@ -63,7 +39,7 @@
               <div class="form-group">
                   <label for="inputEmail" class="control-label col-xs-3">New email</label>
                   <div class="col-xs-6">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="New Email" name="newdata"/>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="<?php echo $userinfo->email; ?>" name="newdata"/>
                   </div>
                   <div class="col-xs-offset-3 col-xs-6s ">
                      <button type="submit" class="btn btn-primary ">
