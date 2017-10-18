@@ -11,21 +11,43 @@ class Bucket extends CI_Controller {
 		$this->load->model('list_model','list');
 		$this->load->model('Profile_model','profile');
 		$this->load->model('login_model','login');
+
 		$this->load->model('user_model','user');
 		$this->load->model('follow_model','follow');
+
+		$this->load->model('Upload_model','upl');
+		$this->load->model('Cover_model','uplb');
+
 	}
 	public function index()
 	{		
 			
 		if(isset($_SESSION['username'])||isset($_SESSION['Email']) && isset($_SESSION['passwword'])){
 		$data['title']="Home";
-		$user = $_SESSION['username'];
-	    $userinfo = $this->user->getUser($user);
-	    $profile=$this->profile->getProfile($userinfo->userid);
-		$details=$this->login->read($userinfo->userid);
-		$name['userid']=$details[0]['userid'];
+
+		
+		$details=$this->login->read($_SESSION['userID']);
+		$photos=$this->upl->read($_SESSION['userID']);
+	
+		if($photos!=null){
+			$name['dp']=$photos[0]['photoname'];
+		}
+		else{
+			$name['dp']='default';
+		}
+
 		$name['username']=$details[0]['username'];
 		$name['alias']=$details[0]['nickname'];
+		foreach($photos as $s){
+			$p=array(
+			'myphotos'=>$s['photoname']
+			
+			);
+			
+			$ph[]=$p;
+		}
+		$name['old']=$ph;
+
 		
 		$lists=$this->list->getlisttime($userinfo->userid);
 		$followers=$this->follow->getfollow($userinfo->userid);
@@ -63,14 +85,23 @@ class Bucket extends CI_Controller {
 		$this->load->view('template/header',$data);
 		$this->load->view('template/navigation', $name);
 		$this->load->view('template/sidebar-home',$name);
+
 		$this->load->view('bucket/bucketwall',['masterlist'=>$masterlist,'userinfo'=>$userinfo,'name2'=>$name2,'profile'=>$profile]);
+
 		$this->load->view('template/right-panel');
 		}
 	else{
 		redirect('Login','refresh');
-		
+
+			$data['title']="LOGIN";
+			$this->load->view('template/header',$data);
+			$this->load->view('template/navigation');
+			$this->load->view('bucket/profile');
+			$this->load->view('template/footer');
+
 		
 	}
+
 			
 	}
 	
@@ -79,9 +110,39 @@ class Bucket extends CI_Controller {
 	public function profile()
 	{
 		$data['title']="Profile";
+		$details=$this->login->read($_SESSION['userID']);
+		$photos=$this->upl->read($_SESSION['userID']);
+		$cover=$this->uplb->read($_SESSION['userID']);
+		if($cover!=null){
+			$name['cp']=$cover[0]['covername'];
+		}
+		else{
+			$name['cp']='default';
+		}
+	
+		if($photos!=null){
+			$name['dp']=$photos[0]['photoname'];
+		}
+		else{
+			$name['dp']='default';
+		}
+		foreach($photos as $s){
+			$p=array(
+			'myphotos'=>$s['photoname']
+			
+			);
+			
+			$ph[]=$p;
+		}
+		$name['old']=$ph;
+
+		$name['username']=$details[0]['username'];
+		$name['alias']=$details[0]['nickname'];
+		
+		
 		$this->load->view('template/header',$data);
-		$this->load->view('template/navigation');
-		$this->load->view('template/sidebar-home');
+		$this->load->view('template/navigation',$name);
+		$this->load->view('template/sidebar-home',$name);
 		$this->load->view('bucket/profile-view');
 		
 	}
@@ -99,6 +160,30 @@ class Bucket extends CI_Controller {
 	    $this->load->model('Profile_model','profile');
 			 	
 	 	$userinfo = $this->profile->getUser($user);
+				$photos=$this->upl->read($_SESSION['userID']);
+		$cover=$this->uplb->read($_SESSION['userID']);
+		if($cover!=null){
+			$name['cp']=$cover[0]['covername'];
+		}
+		else{
+			$name['cp']='default';
+		}
+	
+		if($photos!=null){
+			$name['dp']=$photos[0]['photoname'];
+		}
+		else{
+			$name['dp']='default';
+		}
+		
+		$details=$this->login->read($_SESSION['userID']);
+		// Array ( [0] => Array ( [userID] => 1 [username] => dlvg22 [Email] => dlvg22@yahoo.com [password] => bucketlist ) )
+		$name['username']=$details[0]['username'];
+		$name['alias']=$details[0]['nickname'];
+		$name['userID']=$details[0]['userID'];
+		$name['email']=$details[0]['Email'];
+		$name['password']=$details[0]['password'];
+
 		$data['title']="Settings";
 		if(isset($_SESSION['username'])||isset($_SESSION['Email']) && isset($_SESSION['passwword']))
 		{
