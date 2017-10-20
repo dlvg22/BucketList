@@ -1,0 +1,256 @@
+html,body{
+	margin: 0;
+	padding:0;
+  background-color: #ECECEC;
+}
+/* Log-In Footer*/
+.footcontent{
+  min-width: 700px;
+  font-family: verdana;
+  min-height: 125px;
+  position: bottom;
+  margin: 0;
+  padding: 0;
+  color: #BFBFBF;
+  background-color: #141414;
+}
+
+.footcontent li{
+  font-size: 24;
+  margin-right: 40px;
+  display: inline;
+  list-style: none;}
+
+.footcontent a{
+    color: #BFBFBF;
+    font-family: Verdana;
+}
+
+.footcontent a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.lefter{
+  padding-left:5%; 
+  color: #909090;
+  font-size: 15;
+  padding-top: 4%;
+}
+
+.center{
+  padding-top: 3.5%;
+}
+.righter2{
+  padding-top: 4%;
+}
+.righter2 p{
+  font-size: 16;
+}
+.footcontent img{
+  margin-left: 20px;
+  width: 10%;
+}
+
+/*Default Footer*/
+.plainfooter{
+  bottom: 0; 
+  position: bottom;
+  border-top: 2px black solid;
+  min-width: 500px;
+  height:auto;
+  color: #4F4F4F;   
+  margin: 0;
+  margin-top: 10px;     
+  background-color: white;
+  }
+
+.plainfooter li {
+  font-size: 14;
+  margin-right: 40px;
+  display: inline;
+  list-style: none;}
+
+.plainleft{
+  padding-left:5%; 
+  font-size: 14;
+}
+
+.plaincenter a{
+  color: #4F4F4F;
+}
+
+.plaincenter a:hover{
+  color: black;
+  text-decoration: none;
+}
+
+
+/*Normal Header*/
+.topsider{
+  min-width: 650px;
+  height: 40px;
+  display: inline;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 9999;
+  border-bottom: 2px solid black;
+ }
+
+
+
+#logohere{ 
+  fill: #DF0D0D;
+  margin: 0px;
+  margin-left:65%;
+  width: 22px;
+  margin-top:3px;
+}
+.logo-text{
+  margin: 0;
+  font-size:20px;
+  font-family:rockwell;
+  font-weight:bold;
+ }
+
+ .logo-text p{
+  margin-top: 3px;
+ }
+
+.navi {
+  margin: 0;
+    margin-left: 10px;
+    font-size: 23px;
+}
+
+.navi span{
+  padding-bottom: 30px;
+  margin-top: 7px;
+  margin-left:12.5px;
+  margin-right: 12.5px;
+}
+
+.navi a{  
+  color: black;
+}
+
+.navi a:hover{
+  color: #A8A8A8;
+  border-bottom: 3.5px solid #A8A8A8;
+}
+
+.sbar{
+  margin: 0;
+  padding: 0;
+  padding-top: 3px;
+  font-size: 14px;
+}
+.barbutton{
+  cursor: pointer;
+}
+
+.barbutton:hover{
+  background-color: #ACACAC;
+}
+.ColoredButton{
+  color: white;
+  background-color: #063AB1;
+}
+.bar{
+  width: 100%;
+}
+
+.set{
+  padding: 0;
+  margin: 0px;
+  vertical-align: top;
+  padding-top: 4px;
+  font-size: 20px;
+  font-family: Verdana;
+}
+.account-icon{
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+.dropdowner:hover .caret{
+  color: #A8A8A8;
+  cursor: pointer;
+}
+
+.dropdown-menu li{
+  margin: 0;
+  padding: 0;
+}
+.dropdown-menu span{
+  margin-right: 10px;
+}
+.dropdown-menu a{
+  text-decoration: none;
+  font-family: calibri;
+  color: black;
+   font-size: 15px;
+}
+
+.noresultsfound{
+  font-size: 36;
+  color: black;
+}
+
+.searchbody{
+  min-height: 560px;
+}
+
+/*profile body*/
+
+.profilebody{
+  padding: 0;
+  margin-bottom:;
+  margin-top: 50px;
+  background-color: white;
+  min-height: 500px;
+  min-width: 700px;
+}
+
+
+/*side home version 2*/
+.side-profilepict{
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.specialfooter{
+  margin-top: -20px;
+  font-size: 12px;
+  font font-family: arial;
+}
+
+.specialfooter a:before{
+   content: '\2005 \2022 \2005';
+
+}
+
+.sidebarprofile{
+   height: 100%;
+  background-color: #ECECEC;
+  min-height: 600px;
+  min-width: 1000px;
+}
+
+.sidebarprofile hr{
+  border:0;
+  border-top: 1px solid black; 
+}
+
+.bigheader{
+  margin-left: 6%;
+  margin-right: 1%;
+  min-height:200px;
+  width: 250px;  
+}
+
+.photo-template{
+  margin: 0;
+  margin-bottom: 30px;
+}
