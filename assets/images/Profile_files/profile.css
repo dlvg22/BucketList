@@ -1,0 +1,78 @@
+
+/* profile */
+.user-cover{
+	  width: 97%;
+  height: 220px;
+	position: absolute;
+	
+    color: white;
+}
+#cover{
+	position: relative;
+    top: 170px; 
+	height:50px;
+	padding:15px;
+	left: 77%;
+	width:202px;
+	z-index:100;
+	color:black;
+	font-size:20px;
+	border-top:1px solid black;
+	border-left:1px solid black;
+	
+    background: rgba(255,255,255,0.5);
+	z-index:10;
+	cursor:pointer;
+}
+.ptab{
+	
+	margin-top:160px;
+	
+}
+#choosecover{
+	opacity:0;
+	position: absolute;
+	width:225px;
+		bottom:3px;
+	z-index: 1;
+		cursor:pointer;
+}
+.info{
+	height:500px;
+	border-bottom:1px solid black;
+	border-top:1px solid black;
+	width:881px;
+	margin-left:13px;
+	
+}
+.profile-space{
+	margin-top:30px!important;
+}
+.edit{
+	padding:5px;
+
+	border-bottom:1px solid #f5f5ef!important;
+
+	height:30px;
+}
+.edit:hover{
+	padding:5px;
+	
+	border-bottom:1px solid #d6d6c2!important;
+	background-color:#f5f5ef;
+	height:30px;
+}
+.edit-btn{
+	
+	color:blue;
+	
+}
+.edit-btn:hover{
+	
+
+	text-decoration:underline;
+	cursor:pointer;
+	
+}
+
+

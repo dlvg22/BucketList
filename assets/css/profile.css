@@ -1,0 +1,130 @@
+
+/* profile */
+.user-cover{
+	  width: 97%;
+  height: 220px;
+	position: absolute;
+	
+    color: white;
+}
+#cover{
+	position: relative;
+    top: 170px; 
+	height:50px;
+	padding:15px;
+	left: 77%;
+	width:202px;
+	z-index:100;
+	color:black;
+	font-size:20px;
+	border-top:1px solid black;
+	border-left:1px solid black;
+	
+    background: rgba(255,255,255,0.5);
+	z-index:10;
+	cursor:pointer;
+}
+.ptab{
+	
+	margin-top:160px;
+	
+}
+#choosecover{
+	opacity:0;
+	position: absolute;
+	width:225px;
+		bottom:3px;
+	z-index: 1;
+		cursor:pointer;
+}
+.info{
+	height:300px;
+
+	width:881px;
+
+	
+}
+.profile-space{
+	margin-top:30px!important;
+}
+.edit{
+	padding:5px;
+	
+	border-bottom:1px solid #f5f5ef!important;
+
+	height:50px;
+}
+.edit:hover{
+	padding:5px!important;
+
+	background-color:#f5f5ef;
+	height:50px;
+}
+.edit-btn{
+	
+	color:blue;
+	
+}
+.edit-btn:hover{
+	
+
+	text-decoration:underline;
+	cursor:pointer;
+	
+}
+.custom-edit{
+	
+	background-color:#f5f5ef;
+
+
+}
+.myinfo{
+	color:#b8b894;
+	margin-left:50px;
+
+}
+.myinfo1{
+	color:#b8b894;
+	margin-left:35px;
+
+}
+
+.myinfo2{
+	color:#b8b894;
+	margin-left:55px;
+
+}
+
+.myinfo3{
+	color:#b8b894;
+	margin-left:54px;
+
+}
+
+.myinfo4{
+	color:#b8b894;
+	margin-left:65px;
+
+}
+.myinfo5{
+	color:#b8b894;
+	margin-left:95px;
+
+}
+
+.myinfo6{
+	color:#b8b894;
+	margin-left:30px;
+
+}
+.cheight{
+
+	height:100!important;
+	background-color:#f5f5ef; 
+
+}
+
+
+
+
+

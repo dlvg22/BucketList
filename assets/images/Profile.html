@@ -1,0 +1,483 @@
+
+<!-- saved from url=(0042)http://localhost/BucketList/Bucket/profile -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Profile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./Profile_files/Home.css">
+		<link rel="stylesheet" href="./Profile_files/achievements.css">
+		<link rel="stylesheet" href="./Profile_files/profile.css">
+		<link rel="stylesheet" href="./Profile_files/slider.css">
+		<link rel="stylesheet" href="./Profile_files/thumbnail.css">
+		  <script src="./Profile_files/jquery-3.2.1.min.js.download"></script>
+		<script src="./Profile_files/jquery.min.js.download"> </script>
+	<link href="./Profile_files/default.css" rel="stylesheet" type="text/css">
+	
+	<link href="./Profile_files/style.css" rel="stylesheet" type="text/css">
+	<link href="./Profile_files/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="./Profile_files/bootstrap-theme.css" rel="stylesheet" type="text/css">
+	<link href="./Profile_files/mybootstrap.css" rel="stylesheet" type="text/css">
+	
+	<script src="./Profile_files/bootstrap.min.js.download"> </script>
+   <link rel="stylesheet" href="./Profile_files/settings.css">
+   <link rel="stylesheet" href="./Profile_files/headerfooter.css">
+
+
+  <script src="./Profile_files/jquery-ui.min.js.download"></script>
+
+  <script type="text/javascript" src="./Profile_files/jscript.js.download"></script>
+
+	</head>
+<body>
+<div class="row topsider">
+			<div class="col-xs-1 col-sm-2 col-md-2 col-lg-2 col-xl-2 marker"> 
+				<a href="http://localhost/BucketList/Bucket"><div id="logo" class="img-responsive">	
+					<!--?xml version="1.0" encoding="utf-8"?-->
+				
+					<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="px" y="0px" viewBox="0 0 97 138" style="enable-background:new 0 0 97 138;" xml:space="preserve">
+					<style type="text/css">
+						 width="500"; height="40";
+						.st0{fill:black;}
+					</style>
+					<path class="st0" d="M89.7,52.9L53.2,32.3L50,32.1V79l20-0.2L70.2,99H30V3.9c0,0-1.1-3.6-4.8-3.9L5.6-0.3c0,0-5.6-0.3-5.6,6.1v101.2
+						c0,0-1,3.4,7.1,8.7l38.1,21.6c0,0,5.4,1.2,8.7-1L92,115.1c0,0,4.8-4,5-8.5l0.2-45.4C97.2,61.2,97.8,59,89.7,52.9z M74,98.9
+						l-0.2-19.8l10,9.6L74,98.9z"></path>
+						 
+					</svg>
+				
+				</div>
+				
+			</a></div><a href="http://localhost/BucketList/Bucket">
+			</a>
+			
+			<div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 col-xl-2 navi">
+				<p>
+					<a href="http://localhost/BucketList/Bucket/profile"><span class="glyphicon glyphicon-home" title="Home"></span></a>
+					<a href="http://localhost/BucketList/Bucket/profile"><span class="glyphicon glyphicon-envelope" title="Messages"></span></a>
+					<a href="http://localhost/BucketList/Bucket/profile"><span class="glyphicon glyphicon-bell" title="Notifications"></span></a>
+				</p>		
+			</div>
+
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-5 sbar">
+				<form action="http://localhost/BucketList/bucket/search" id="form1" method="get">
+  					<div class="input-group bar">
+  					<input type="search" class="form-control input searcher" name="search" placeholder="Search">
+					<span class="input-group-addon barbutton">
+					<i class="glyphicon glyphicon-search" onclick="form1.submit();" type="button"></i>
+					</span>
+				</div>
+   				</form>
+			</div>
+
+			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 set">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			
+				<p data-toggle="dropdown" class="dropdowner"><span id="name">
+		
+				DELAVEGA!</span> <img src="./Profile_files/8_EDUARDO.JPG" class="account-icon img-circle" alt="Picture"><span class="caret"></span></p>
+				 <ul class="dropdown-menu" role="menu">
+    			  <li role="presentation"><a role="menuitem" href="http://localhost/BucketList/Bucket/profile"><span class="glyphicon glyphicon-User"></span> Profile</a></li>
+    			  <li role="presentation"><a role="menuitem" href="http://localhost/BucketList/Bucket/settings"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+    			  <li role="presentation" class="divider"></li>
+  			  	  <li role="presentation"><a role="menuitem" href="http://localhost/BucketList/Login/logout"><span class="glyphicon glyphicon-off"></span> Log Out</a></li>    
+    			</ul>
+
+				</div>
+
+			</div>
+
+</div>
+
+  <script type="text/javascript">
+  				$(document).ready(function(){
+    $(".account-icon").click(function(){
+    $(this).dropdown();});
+});
+
+		 
+			 
+
+  	$('.bar').click(function(e) {
+   		$('.barbutton').addClass("ColoredButton");
+  	});
+	$('.bar').focusout(function() {
+        $('.barbutton').removeClass("ColoredButton");
+	});
+	
+
+</script><script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<!-- home photo -->
+
+
+	
+					
+
+			
+<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 default-space bigheader">
+	<div class="photo-template ">
+	
+			<form action="http://localhost/BucketList/Upload/displaypic" id="upload_now" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+
+			<img onclick="openModal();currentSlide(1)" src="./Profile_files/8_EDUARDO.JPG" id="usr-img" class="user-image side-profilepict hover-shadow cursor">
+					<div id="upload" class="text-center hideupload">
+					<span class="glyphicon glyphicon-camera cam"></span>
+					<input type="file" id="choosefile" size="20" name="disp">
+					 
+					</div></form>
+			
+			
+	
+			
+<div id="myModal" class="modal">
+	
+  <div class="modal-content slide">
+	<span class="close cursor" data-dismiss="modal" aria-label="Close" aria-hidden="true" onclick="closeModal()">×</span>
+	<div class="mySlides">
+      
+      <img src="./Profile_files/8_EDUARDO.JPG" style="width:100%" class="img-size">
+    </div><div class="mySlides">
+      
+      <img src="./Profile_files/image12.jpg" style="width:100%" class="img-size">
+    </div><div class="mySlides">
+      
+      <img src="./Profile_files/d8d47af9059b6b3f12e47ea6014c966d1.png" style="width:100%" class="img-size">
+    </div><div class="mySlides">
+      
+      <img src="./Profile_files/d8d47af9059b6b3f12e47ea6014c966d.png" style="width:100%" class="img-size">
+    </div><div class="mySlides">
+      
+      <img src="./Profile_files/bg72.jpg" style="width:100%" class="img-size">
+    </div><div class="mySlides">
+      
+      <img src="./Profile_files/Cartoon10.png" style="width:100%" class="img-size">
+    </div><div class="mySlides">
+      
+      <img src="./Profile_files/logo1.png" style="width:100%" class="img-size">
+    </div><div class="mySlides">
+      
+      <img src="./Profile_files/box26.png" style="width:100%" class="img-size">
+    </div><div class="mySlides">
+      
+      <img src="./Profile_files/blue.png" style="width:100%" class="img-size">
+    </div><div class="mySlides">
+      
+      <img src="./Profile_files/box1.png" style="width:100%" class="img-size">
+    </div><div class="mySlides">
+      
+      <img src="./Profile_files/box.png" style="width:100%" class="img-size">
+    </div><div class="mySlides">
+      
+      <img src="./Profile_files/cart11.png" style="width:100%" class="img-size">
+    </div><div class="mySlides">
+      
+      <img src="./Profile_files/black.png" style="width:100%" class="img-size">
+    </div><div class="mySlides">
+      
+      <img src="./Profile_files/cart.png" style="width:100%" class="img-size">
+    </div>    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+
+	<div class="scoller">
+	<div class="inner">
+	<div class="column">
+	  <img class="demo cursor" src="./Profile_files/8_EDUARDO.JPG" onclick="currentSlide(1)">
+    </div><div class="column">
+	  <img class="demo cursor" src="./Profile_files/image12.jpg" onclick="currentSlide(2)">
+    </div><div class="column">
+	  <img class="demo cursor" src="./Profile_files/d8d47af9059b6b3f12e47ea6014c966d1.png" onclick="currentSlide(3)">
+    </div><div class="column">
+	  <img class="demo cursor" src="./Profile_files/d8d47af9059b6b3f12e47ea6014c966d.png" onclick="currentSlide(4)">
+    </div><div class="column">
+	  <img class="demo cursor" src="./Profile_files/bg72.jpg" onclick="currentSlide(5)">
+    </div><div class="column">
+	  <img class="demo cursor" src="./Profile_files/Cartoon10.png" onclick="currentSlide(6)">
+    </div><div class="column">
+	  <img class="demo cursor" src="./Profile_files/logo1.png" onclick="currentSlide(7)">
+    </div><div class="column">
+	  <img class="demo cursor" src="./Profile_files/box26.png" onclick="currentSlide(8)">
+    </div><div class="column">
+	  <img class="demo cursor" src="./Profile_files/blue.png" onclick="currentSlide(9)">
+    </div><div class="column">
+	  <img class="demo cursor" src="./Profile_files/box1.png" onclick="currentSlide(10)">
+    </div><div class="column">
+	  <img class="demo cursor" src="./Profile_files/box.png" onclick="currentSlide(11)">
+    </div><div class="column">
+	  <img class="demo cursor" src="./Profile_files/cart11.png" onclick="currentSlide(12)">
+    </div><div class="column">
+	  <img class="demo cursor" src="./Profile_files/black.png" onclick="currentSlide(13)">
+    </div><div class="column">
+	  <img class="demo cursor" src="./Profile_files/cart.png" onclick="currentSlide(14)">
+    </div>     </div>
+     </div>
+
+  </div>
+</div>
+			
+			</div>
+
+		<div class="home-about">
+			<p class="user-name">DELAVEGA!</p>
+			<p class="user-acc">@dlvg22</p>
+			<span class="glyphicon glyphicon-user about-title icon-color"></span>&nbsp;<strong>About</strong>
+			<p class="text-center about-title">The algo you've usually see;</p>
+			<hr>						
+			<p class="info-text"><span class="glyphicon glyphicon-home icon-color"></span>&nbsp;Tondo,Manila Philippines</p>
+			<p class="info-text"><span class="glyphicon glyphicon-calendar icon-color"></span>&nbsp;April 22,1998</p>
+			<p class="info-text"><span class="glyphicon glyphicon-pencil icon-color"></span>&nbsp;Programmer/developer</p>
+			<hr>
+			<p class="specialfooter"><br>©BucketList <a href="http://localhost/BucketList/Bucket/profile">About Us</a> <a href="http://localhost/BucketList/Bucket/profile">Developers</a> <a href="http://localhost/BucketList/Bucket/profile">Credits</a></p>
+		
+		</div>
+
+			
+	
+	
+	
+	
+	
+			
+
+
+		 		 
+
+	
+	
+
+			<script>
+	
+				    $('#upload').addClass('hideupload');
+		$(".photo-template").hover(function(){
+			$("#upload").removeClass('hideupload');
+			
+		},function(){
+			    $('#upload').addClass('hideupload');
+			
+			
+		});
+		
+		
+	
+		</script>
+		<script>
+			$('#choosefile').change(function(){  
+			$('#upload_now').submit();
+			});
+		</script>
+		
+	
+	
+
+
+
+</div>
+<div class="col-xs-7 col-sm-7 col-md-8 col-lg-8 col-xl-8">
+	<div class="profilebody">
+			<form action="http://localhost/BucketList/Cover_upload/displaycov" id="coverupload" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+			<div class="cover-wrapper"><img class="user-cover" src="./Profile_files/background1.jpg">
+			<div id="cover" class="text-center hideupload">
+			<span class="glyphicon glyphicon-camera cam"></span>&nbsp;Upload Cover
+			<input type="file" id="choosecover" size="20" name="cphoto">
+			 
+			</div>
+	
+	
+	
+			</div></form>
+	<ul class="nav nav-tabs ptab">
+    <li class="active"><a href="http://localhost/BucketList/Bucket/profile#">Information</a></li>
+    <li><a href="http://localhost/BucketList/Bucket/profile#">BucketList</a></li>
+    <li><a href="http://localhost/BucketList/Bucket/profile#">Achievement</a></li>
+    <li><a href="http://localhost/BucketList/Bucket/profile#">BucketMate</a></li>
+	</ul>
+<div class="tab-content">
+		
+					
+					<div class="tab-pane fade in active">
+						<form class="form-horizontal" method="post" action="http://localhost/BucketList/Bucket/profile">
+    					<div class="form-group">
+						
+						<div class="info profile-space">
+						<div class="col-md-12  edit" id="">
+								<label for="">Firstname:</label>
+								<span "myinfo"=""></span>
+							    <span class="edit-btn  pull-right" id="fedit">Edit</span>
+						</div> 
+						
+      					 	<div class="form" id="fname" style="display: none;"> 
+							
+								<div class="col-md-7 col-md-offset-2">
+									
+									<input name="firstname" type="text" class="form-control" id="firstname" placeholder="First name" value="">
+								</div>
+							</div>
+							
+							
+								<div class="col-md-12  edit" id="">
+								<label for="">Middle name:</label>
+								<span "myinfo"=""></span>
+							    <span class="edit-btn  pull-right" id="medit">Edit</span>
+						</div> 
+						
+      					 	<div class="form" id="mname" style="display: none;"> 
+							
+								<div class="col-md-7 col-md-offset-2">
+									
+									<input name="firstname" type="text" class="form-control" id="firstname" placeholder="First name" value="">
+								</div>
+							</div>
+
+						<div class="col-md-12  edit" id="">
+								<label for="">Lastname:</label>
+								<span "myinfo"=""></span>
+							    <span class="edit-btn pull-right" id="ledit">Edit</span>
+						</div> 
+						
+      					 	<div class="form" id="lname" style="display: none;"> 
+							
+								<div class="col-md-7 col-md-offset-2">
+									
+									<input name="firstname" type="text" class="form-control" id="firstname" placeholder="First name" value="">
+								</div>
+							</div>	
+						
+						<div class="col-md-12  edit" id="">
+								<label for="">Nickname:</label>
+								<span "myinfo"=""></span>
+							    <span class="edit-btn pull-right" id="ledit">Edit</span>
+						</div> 
+						
+      					 	<div class="form" id="lname"> 
+							
+								<div class="col-md-7 col-md-offset-2">
+									
+									<input name="firstname" type="text" class="form-control" id="firstname" placeholder="First name" value="">
+								</div>
+							</div>							
+						
+						
+						
+						<div class="col-md-12  edit" id="">
+								<label for="">Birthday:</label>
+								<span "myinfo"=""></span>
+							    <span class="edit-btn pull-right" id="ledit">Edit</span>
+						</div> 
+						
+      					 	<div class="form" id="lname"> 
+							
+								<div class="col-md-7 col-md-offset-2">
+									
+									<input name="firstname" type="text" class="form-control" id="firstname" placeholder="First name" value="">
+								</div>
+							</div>	
+
+
+						<div class="col-md-12  edit" id="">
+								<label for="">Sex:</label>
+								<span "myinfo"=""></span>
+							    <span class="edit-btn pull-right" id="ledit">Edit</span>
+						</div> 
+						
+      					 	<div class="form" id="lname"> 
+							
+								<div class="col-md-7 col-md-offset-2">
+									
+									<input name="firstname" type="text" class="form-control" id="firstname" placeholder="First name" value="">
+								</div>
+							</div>														
+
+					
+						<div class="col-md-12  edit" id="">
+								<label for="">Address:</label>
+								<span "myinfo"=""></span>
+							    <span class="edit-btn pull-right" id="ledit">Edit</span>
+						</div> 
+						
+      					 	<div class="form" id="lname"> 
+							
+								<div class="col-md-7 col-md-offset-2">
+									
+									<input name="firstname" type="text" class="form-control" id="firstname" placeholder="First name" value="">
+								</div>
+							</div>							
+							
+						
+					</div>
+					</div></form>
+
+  </div>
+ 
+					
+
+
+</div>
+
+<script>
+	
+		   $('#cover').addClass('hideupload');
+			$(".cover-wrapper").hover(function(){
+			$("#cover").removeClass('hideupload');
+			
+		},function(){
+			    $('#cover').addClass('hideupload');
+			
+			
+		});
+		
+		
+	
+		</script>
+		<script>
+			$('#choosecover').change(function(){  
+			$('#coverupload').submit();
+			});
+		</script>
+		
+		
+		
+		<script>
+		$('#fname').hide();
+		$('#mname').hide();
+		$('#lname').hide();
+		
+			$('#fedit').click(function(){  
+			$('#fname').toggle();
+			});
+		</script></div></div></body></html>
